@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Legal — Trading Insights</title>
+  <style>
+    :root { --bg:#0a0e1a; --surface:#111827; --border:#1f2937; --accent:#f59e0b; --text:#e5e7eb; --heading:#f9fafb; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background:var(--bg); color:var(--text); font-family:'Segoe UI',system-ui,sans-serif; min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:40px 20px; }
+    .card { background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:40px 32px; max-width:440px; width:100%; text-align:center; }
+    .icon { font-size:48px; margin-bottom:16px; }
+    h1 { font-size:24px; font-weight:800; color:var(--heading); margin-bottom:8px; }
+    p { color:#9ca3af; font-size:14px; margin-bottom:28px; }
+    .btn {
+      display:block; width:100%;
+      background:var(--accent); color:#000;
+      font-weight:700; font-size:15px;
+      padding:14px; border-radius:10px;
+      text-decoration:none; margin-bottom:12px;
+      transition:opacity 0.2s;
+    }
+    .btn:hover { opacity:0.85; }
+    .btn.secondary { background:transparent; border:1px solid var(--border); color:var(--text); }
+    .divider { border:none; border-top:1px solid var(--border); margin:20px 0; }
+    footer { margin-top:24px; font-size:12px; color:#4b5563; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="icon">📈</div>
+    <h1>Trading Insights</h1>
+    <p>Legal documents and policies for the Trading Insights mobile application.</p>
+    <a href="./privacy-policy.html" class="btn">🔒 Privacy Policy</a>
+    <a href="./terms.html" class="btn secondary">📋 Terms &amp; Conditions</a>
+    <hr class="divider"/>
+    <p style="font-size:13px">Questions? Contact us at<br/><strong style="color:#f59e0b">support.trading.insights@gmail.com</strong></p>
+  </div>
+  <footer>© 2025 Trading Insights</footer>
+</body>
+</html>
