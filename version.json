@@ -2,7 +2,7 @@
   "version": "1.0.1",
   "min_version": "1.0.0",
   "build_number": 1,
-  "force_update": false,
+  "force_update": true,
   "message": "New update available on Play Store.",
   "play_store_url": "https://play.google.com/store/apps/details?id=com.premium.trading_insights.signals"
 }
