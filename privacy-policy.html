@@ -2,241 +2,210 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy — Trading Insights</title>
   <style>
-    :root {
-      --bg: #0a0e1a;
-      --surface: #111827;
-      --border: #1f2937;
-      --accent: #f59e0b;
-      --accent2: #10b981;
-      --text: #e5e7eb;
-      --muted: #9ca3af;
-      --heading: #f9fafb;
-    }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-      font-size: 15px;
-      line-height: 1.75;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+      background: #f8f9fa;
+      color: #2d2d2d;
+      line-height: 1.7;
     }
     header {
-      background: linear-gradient(135deg, #0a0e1a 0%, #111827 100%);
-      border-bottom: 1px solid var(--border);
-      padding: 28px 24px 24px;
+      background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+      color: #fff;
       text-align: center;
+      padding: 48px 24px 40px;
     }
-    .logo-row {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      margin-bottom: 6px;
-    }
-    .logo-icon {
-      width: 36px; height: 36px;
-      background: var(--accent);
-      border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 18px;
-    }
-    .app-name {
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--heading);
-      letter-spacing: 0.5px;
-    }
-    .page-title {
-      font-size: 26px;
-      font-weight: 800;
-      color: var(--heading);
-      margin-top: 8px;
-    }
-    .last-updated {
-      font-size: 13px;
-      color: var(--muted);
-      margin-top: 6px;
+    header .icon { font-size: 3rem; margin-bottom: 12px; }
+    header h1 { font-size: 1.8rem; font-weight: 700; letter-spacing: -0.5px; }
+    header p { font-size: 0.9rem; margin-top: 8px; opacity: 0.85; }
+    .badge-row {
+      display: flex; justify-content: center; gap: 12px;
+      margin-top: 16px; flex-wrap: wrap;
     }
     .badge {
-      display: inline-block;
-      background: rgba(245,158,11,0.15);
-      border: 1px solid rgba(245,158,11,0.4);
-      color: var(--accent);
-      font-size: 11px;
-      font-weight: 600;
-      padding: 3px 10px;
-      border-radius: 20px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-top: 10px;
+      background: rgba(255,255,255,0.2); border-radius: 20px;
+      padding: 4px 14px; font-size: 0.8rem; font-weight: 500;
     }
-    main {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 32px 20px 60px;
-    }
-    .intro-card {
-      background: rgba(16,185,129,0.08);
-      border: 1px solid rgba(16,185,129,0.25);
-      border-radius: 12px;
-      padding: 18px 20px;
-      margin-bottom: 32px;
-      color: #a7f3d0;
-      font-size: 14px;
-    }
-    .intro-card strong { color: #6ee7b7; }
-    section {
-      background: var(--surface);
-      border: 1px solid var(--border);
+    main { max-width: 820px; margin: 0 auto; padding: 40px 20px 60px; }
+
+    /* ── HIGHLIGHT BOX ── */
+    .deletion-highlight {
+      background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+      border: 2px solid #43a047;
       border-radius: 14px;
-      padding: 24px;
-      margin-bottom: 20px;
+      padding: 28px 32px;
+      margin-bottom: 40px;
     }
-    section h2 {
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--heading);
-      margin-bottom: 14px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+    .deletion-highlight .dh-title {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 1.2rem; font-weight: 700; color: #1b5e20;
+      margin-bottom: 16px;
     }
-    section h2 .num {
-      width: 26px; height: 26px;
-      background: var(--accent);
-      color: #000;
-      border-radius: 6px;
-      font-size: 12px;
-      font-weight: 800;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-    section p { color: var(--text); margin-bottom: 10px; font-size: 14px; }
-    section p:last-child { margin-bottom: 0; }
-    ul {
+    .deletion-highlight .steps {
+      counter-reset: step;
       list-style: none;
-      padding: 0;
-      margin: 10px 0;
+      display: flex; flex-direction: column; gap: 10px;
     }
-    ul li {
-      position: relative;
-      padding-left: 20px;
-      margin-bottom: 7px;
-      font-size: 14px;
-      color: var(--text);
+    .deletion-highlight .steps li {
+      counter-increment: step;
+      display: flex; align-items: flex-start; gap: 14px;
     }
-    ul li::before {
-      content: '▸';
-      position: absolute;
-      left: 0;
-      color: var(--accent);
-      font-size: 11px;
-      top: 1px;
+    .deletion-highlight .steps li::before {
+      content: counter(step);
+      background: #2e7d32; color: #fff;
+      width: 28px; height: 28px; min-width: 28px;
+      border-radius: 50%; display: flex;
+      align-items: center; justify-content: center;
+      font-size: 0.85rem; font-weight: 700; margin-top: 1px;
     }
-    .warn-card {
-      background: rgba(239,68,68,0.08);
-      border: 1px solid rgba(239,68,68,0.3);
-      border-radius: 10px;
-      padding: 14px 16px;
-      margin-top: 14px;
-      color: #fca5a5;
-      font-size: 13px;
-      line-height: 1.6;
+    .deletion-highlight .steps li span { color: #2d2d2d; font-size: 0.97rem; }
+    .deletion-highlight .dh-note {
+      margin-top: 18px; padding: 12px 16px;
+      background: rgba(255,255,255,0.7); border-radius: 8px;
+      font-size: 0.88rem; color: #1b5e20;
     }
-    .warn-card strong { color: #f87171; }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 14px;
+    .deletion-highlight .alt-method {
+      margin-top: 14px; font-size: 0.9rem; color: #2d2d2d;
     }
-    @media (max-width: 480px) {
-      .contact-grid { grid-template-columns: 1fr; }
+    .deletion-highlight .alt-method a { color: #1b5e20; font-weight: 600; }
+
+    /* ── SECTION CARDS ── */
+    .section-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     }
-    .contact-item {
-      background: rgba(245,158,11,0.07);
-      border: 1px solid rgba(245,158,11,0.2);
-      border-radius: 10px;
-      padding: 14px;
+    .section-card h2 {
+      font-size: 1.05rem; font-weight: 700; color: #1a73e8;
+      margin-bottom: 14px; display: flex; align-items: center; gap: 8px;
     }
-    .contact-item .label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--accent);
-      font-weight: 700;
-      margin-bottom: 4px;
+    .section-card p { font-size: 0.95rem; margin-bottom: 10px; }
+    .section-card ul { padding-left: 0; list-style: none; }
+    .section-card ul li {
+      padding: 5px 0 5px 20px;
+      position: relative; font-size: 0.95rem;
     }
-    .contact-item .value {
-      font-size: 14px;
-      color: var(--heading);
-      font-weight: 600;
+    .section-card ul li::before {
+      content: "•"; position: absolute; left: 0; color: #1a73e8; font-weight: 700;
     }
+    .section-card strong { color: #1a1a1a; }
+    .section-card .warning-box {
+      background: #fff8e1; border-left: 4px solid #f9a825;
+      padding: 12px 16px; border-radius: 0 8px 8px 0;
+      font-size: 0.9rem; margin-top: 12px; color: #5d4037;
+    }
+    table {
+      width: 100%; border-collapse: collapse; margin-top: 12px;
+      font-size: 0.9rem;
+    }
+    th {
+      background: #f0f4ff; color: #1a73e8; padding: 10px 14px;
+      text-align: left; font-weight: 600;
+    }
+    td { padding: 10px 14px; border-bottom: 1px solid #e8eaf0; }
+    tr:last-child td { border-bottom: none; }
+
+    /* ── FOOTER ── */
     footer {
-      text-align: center;
-      padding: 24px 20px;
-      border-top: 1px solid var(--border);
-      font-size: 12px;
-      color: var(--muted);
+      background: #1a1a2e; color: #aaa; text-align: center;
+      padding: 28px 20px; font-size: 0.85rem;
     }
-    footer a { color: var(--accent); text-decoration: none; }
-    a { color: var(--accent2); }
+    footer a { color: #7ab3f5; text-decoration: none; margin: 0 10px; }
+    footer a:hover { text-decoration: underline; }
+    footer .copy { margin-top: 8px; font-size: 0.8rem; color: #666; }
+
+    @media (max-width: 600px) {
+      .section-card, .deletion-highlight { padding: 20px 18px; }
+      header { padding: 36px 16px 30px; }
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <div class="logo-row">
-    <div class="logo-icon">📈</div>
-    <span class="app-name">Trading Insights</span>
+  <div class="icon">📈</div>
+  <h1>Trading Insights</h1>
+  <p>Privacy Policy</p>
+  <div class="badge-row">
+    <span class="badge">Last Updated: June 2026</span>
+    <span class="badge">Effective Immediately</span>
   </div>
-  <div class="page-title">Privacy Policy</div>
-  <div class="last-updated">Last Updated: June 2026</div>
-  <div class="badge">Effective Immediately</div>
 </header>
 
 <main>
 
-  <div class="intro-card">
-    <strong>Your privacy matters to us.</strong> This Privacy Policy explains how Trading Insights ("we," "us," or "our") collects, uses, and protects your personal information when you use our mobile application. By using the app, you agree to this policy.
+  <!-- ══════════════════════════════════════════════════
+       🟢 ACCOUNT & DATA DELETION — HIGHLIGHTED AT TOP
+       (Google Play Console requirement)
+       ══════════════════════════════════════════════════ -->
+  <div class="deletion-highlight" id="delete-account">
+    <div class="dh-title">
+      🗑️ How to Delete Your Account &amp; Data
+    </div>
+    <ol class="steps">
+      <li><span>Open the <strong>Trading Insights</strong> app on your device.</span></li>
+      <li><span>Go to <strong>Profile</strong> or <strong>Account</strong> section (bottom navigation or menu).</span></li>
+      <li><span>Tap <strong>"Delete Account"</strong> button.</span></li>
+      <li><span>Read the confirmation message and tap <strong>"Confirm"</strong> to permanently delete.</span></li>
+    </ol>
+    <div class="dh-note">
+      ✅ <strong>All your personal data will be permanently deleted</strong> within <strong>30 days</strong> of your request.<br/>
+      This includes: account info, trading history, EA downloads, device registrations, and all personal preferences.
+    </div>
+    <p class="alt-method">
+      📧 <strong>Alternative:</strong> Email us at
+      <a href="mailto:support.trading.insights@gmail.com">support.trading.insights@gmail.com</a>
+      to request deletion. We respond within 2 business days.
+    </p>
+  </div>
+
+  <!-- INTRO STATEMENT -->
+  <div class="section-card">
+    <p>
+      <strong>Your privacy matters to us.</strong> This Privacy Policy explains how Trading Insights
+      ("we," "us," or "our") collects, uses, and protects your personal information when you use our
+      mobile application. By using the app, you agree to this policy.
+    </p>
   </div>
 
   <!-- 1. Information We Collect -->
-  <section>
-    <h2><span class="num">1</span> Information We Collect</h2>
+  <div class="section-card">
+    <h2>1️⃣ Information We Collect</h2>
     <p>We collect the following types of information when you use Trading Insights:</p>
-    <p><strong style="color:#f9fafb">Account Information:</strong></p>
+    <p><strong>Account Information:</strong></p>
     <ul>
       <li>Full name and email address (required for registration)</li>
       <li>Password (stored securely via Firebase Authentication — never stored in plain text)</li>
       <li>Profile details you provide during onboarding</li>
     </ul>
-    <p><strong style="color:#f9fafb">Device Information:</strong></p>
+    <p style="margin-top:12px"><strong>Device Information:</strong></p>
     <ul>
       <li>Device model, OS version, and unique device identifier</li>
       <li>Used for device registration and license verification</li>
       <li>App version and installation information</li>
     </ul>
-    <p><strong style="color:#f9fafb">Usage &amp; Activity Data:</strong></p>
+    <p style="margin-top:12px"><strong>Usage &amp; Activity Data:</strong></p>
     <ul>
       <li>Trading signals viewed and subscribed to</li>
       <li>Expert Advisor (EA) download and usage history</li>
       <li>In-app navigation and feature usage</li>
     </ul>
-    <p><strong style="color:#f9fafb">Payment &amp; Subscription Data:</strong></p>
+    <p style="margin-top:12px"><strong>Payment &amp; Subscription Data:</strong></p>
     <ul>
       <li>Subscription plan and status</li>
       <li>Payment transaction history (payment amounts, dates)</li>
       <li>We do <strong>not</strong> store credit card or bank account numbers</li>
     </ul>
-  </section>
+  </div>
 
   <!-- 2. How We Use Your Information -->
-  <section>
-    <h2><span class="num">2</span> How We Use Your Information</h2>
+  <div class="section-card">
+    <h2>2️⃣ How We Use Your Information</h2>
     <p>We use your information solely to provide and improve our services:</p>
     <ul>
       <li>Authenticate your account and verify your identity</li>
@@ -248,30 +217,35 @@
       <li>Improve app performance and fix bugs</li>
       <li>Comply with legal obligations</li>
     </ul>
-    <p><strong style="color:#f9fafb">We do NOT:</strong></p>
+    <p style="margin-top:14px"><strong>We do NOT:</strong></p>
     <ul>
       <li>Sell your personal data to third parties</li>
       <li>Use your data for advertising purposes</li>
       <li>Share your data with unauthorized third parties</li>
     </ul>
-  </section>
+  </div>
 
   <!-- 3. Third-Party Services -->
-  <section>
-    <h2><span class="num">3</span> Third-Party Services We Use</h2>
+  <div class="section-card">
+    <h2>3️⃣ Third-Party Services We Use</h2>
     <p>We use trusted third-party services to operate our app. Each has its own privacy policy:</p>
     <ul>
-      <li><strong style="color:#f9fafb">Firebase (Google LLC)</strong> — Authentication and push notifications (FCM). <a href="https://firebase.google.com/privacy" target="_blank">Firebase Privacy Policy</a></li>
-      <li><strong style="color:#f9fafb">Google Play Services</strong> — App delivery and in-app billing on Android. <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
-      <li><strong style="color:#f9fafb">In-App Live Chat</strong> — Customer support is handled directly within the app via our built-in live support chat feature.</li>
+      <li><strong>Firebase (Google LLC)</strong> — Authentication and push notifications (FCM).
+        <a href="https://firebase.google.com/privacy" target="_blank">Firebase Privacy Policy</a></li>
+      <li><strong>Google Play Services</strong> — App delivery and in-app billing on Android.
+        <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+      <li><strong>In-App Live Chat</strong> — Customer support is handled directly within the app
+        via our built-in live support chat feature.</li>
     </ul>
-    <p>These services may collect and process your data according to their own policies. We only share the minimum data necessary for these services to function.</p>
-  </section>
+    <p style="margin-top:12px">These services may collect and process your data according to their own
+      policies. We only share the minimum data necessary for these services to function.</p>
+  </div>
 
   <!-- 4. Data Storage & Security -->
-  <section>
-    <h2><span class="num">4</span> Data Storage &amp; Security</h2>
-    <p>Your account credentials are stored securely on Google Firebase servers. Application data is stored on our own secured backend servers. We implement the following security measures:</p>
+  <div class="section-card">
+    <h2>4️⃣ Data Storage &amp; Security</h2>
+    <p>Your account credentials are stored securely on Google Firebase servers. Application data is
+      stored on our own secured backend servers. We implement the following security measures:</p>
     <ul>
       <li>All data transmission is encrypted using HTTPS/TLS</li>
       <li>Passwords are hashed — we cannot view your plain-text password</li>
@@ -279,25 +253,47 @@
       <li>API endpoints require authenticated Bearer tokens (JWT)</li>
       <li>Device registration prevents unauthorized account sharing</li>
     </ul>
-    <p>While we take security seriously, no system is 100% immune. Please use a strong, unique password for your account.</p>
-  </section>
+    <p style="margin-top:12px">While we take security seriously, no system is 100% immune.
+      Please use a strong, unique password for your account.</p>
+  </div>
 
   <!-- 5. Data Retention -->
-  <section>
-    <h2><span class="num">5</span> Data Retention</h2>
+  <div class="section-card">
+    <h2>5️⃣ Data Retention</h2>
     <p>We retain your data for as long as your account is active or as needed to provide services:</p>
-    <ul>
-      <li><strong style="color:#f9fafb">Account data:</strong> Retained while your account is active</li>
-      <li><strong style="color:#f9fafb">Transaction records:</strong> Retained for 7 years for legal/accounting compliance</li>
-      <li><strong style="color:#f9fafb">Device logs:</strong> Retained for up to 90 days</li>
-      <li><strong style="color:#f9fafb">Deleted accounts:</strong> Data removed within 30 days of deletion request</li>
-    </ul>
-    <p>To request account deletion, contact us at <strong style="color:#f9fafb">support.trading.insights@gmail.com</strong>.</p>
-  </section>
+    <table>
+      <tr>
+        <th>Data Type</th>
+        <th>Retention Period</th>
+      </tr>
+      <tr>
+        <td>Account data</td>
+        <td>While your account is active</td>
+      </tr>
+      <tr>
+        <td>Transaction records</td>
+        <td>7 years (legal/accounting compliance)</td>
+      </tr>
+      <tr>
+        <td>Device logs</td>
+        <td>Up to 90 days</td>
+      </tr>
+      <tr>
+        <td>Deleted account data</td>
+        <td><strong>Removed within 30 days of deletion request</strong></td>
+      </tr>
+    </table>
+    <p style="margin-top:14px">
+      To request account deletion, see the
+      <a href="#delete-account" style="color:#1a73e8;font-weight:600">Account Deletion section</a>
+      above, or contact us at
+      <a href="mailto:support.trading.insights@gmail.com" style="color:#1a73e8">support.trading.insights@gmail.com</a>.
+    </p>
+  </div>
 
   <!-- 6. Push Notifications -->
-  <section>
-    <h2><span class="num">6</span> Push Notifications</h2>
+  <div class="section-card">
+    <h2>6️⃣ Push Notifications</h2>
     <p>We use Firebase Cloud Messaging (FCM) to send you push notifications, including:</p>
     <ul>
       <li>New trading signals and market alerts</li>
@@ -305,74 +301,85 @@
       <li>Important app announcements</li>
       <li>Account-related notifications</li>
     </ul>
-    <p>You can disable push notifications at any time from your device settings. Disabling notifications will not affect your core app functionality.</p>
-  </section>
+    <p style="margin-top:12px">You can disable push notifications at any time from your device
+      settings. Disabling notifications will not affect your core app functionality.</p>
+  </div>
 
   <!-- 7. Children's Privacy -->
-  <section>
-    <h2><span class="num">7</span> Children's Privacy</h2>
-    <p>Trading Insights is intended for users <strong style="color:#f9fafb">18 years of age or older</strong>. We do not knowingly collect personal information from children under 18. Financial trading involves significant risk and is not suitable for minors.</p>
-    <p>If you believe we have inadvertently collected information from a minor, please contact us immediately and we will delete it promptly.</p>
-  </section>
+  <div class="section-card">
+    <h2>7️⃣ Children's Privacy</h2>
+    <p>Trading Insights is intended for users <strong>18 years of age or older</strong>. We do not
+      knowingly collect personal information from children under 18. Financial trading involves
+      significant risk and is not suitable for minors.</p>
+    <p style="margin-top:10px">If you believe we have inadvertently collected information from a
+      minor, please contact us immediately and we will delete it promptly.</p>
+  </div>
 
   <!-- 8. Your Rights -->
-  <section>
-    <h2><span class="num">8</span> Your Rights</h2>
+  <div class="section-card">
+    <h2>8️⃣ Your Rights</h2>
     <p>You have the following rights regarding your personal data:</p>
     <ul>
-      <li><strong style="color:#f9fafb">Access:</strong> Request a copy of the data we hold about you</li>
-      <li><strong style="color:#f9fafb">Correction:</strong> Update inaccurate or incomplete information</li>
-      <li><strong style="color:#f9fafb">Deletion:</strong> Request deletion of your account and associated data</li>
-      <li><strong style="color:#f9fafb">Portability:</strong> Request your data in a machine-readable format</li>
-      <li><strong style="color:#f9fafb">Objection:</strong> Object to specific types of data processing</li>
+      <li><strong>Access:</strong> Request a copy of the data we hold about you</li>
+      <li><strong>Correction:</strong> Update inaccurate or incomplete information</li>
+      <li><strong>Deletion:</strong> Request deletion of your account and associated data
+        — <a href="#delete-account" style="color:#1a73e8">see How to Delete Your Account</a></li>
+      <li><strong>Portability:</strong> Request your data in a machine-readable format</li>
+      <li><strong>Objection:</strong> Object to specific types of data processing</li>
     </ul>
-    <p>To exercise any of these rights, contact us at <strong style="color:#f9fafb">support.trading.insights@gmail.com</strong>. We will respond within 30 days.</p>
-  </section>
+    <p style="margin-top:12px">To exercise any of these rights, contact us at
+      <a href="mailto:support.trading.insights@gmail.com" style="color:#1a73e8">support.trading.insights@gmail.com</a>.
+      We will respond within 30 days.</p>
+  </div>
 
   <!-- 9. Financial Disclaimer -->
-  <section>
-    <h2><span class="num">9</span> Important Financial Disclaimer</h2>
-    <div class="warn-card">
-      <strong>⚠️ IMPORTANT:</strong> Trading Insights provides trading signals and tools for <strong>informational and educational purposes only</strong>. We are NOT a registered financial advisor, broker, or investment firm. Nothing in this app constitutes financial advice, investment recommendations, or an offer to buy or sell any financial instrument.
-      <br/><br/>
-      Forex, cryptocurrency, and CFD trading involves substantial risk of loss. Past performance of signals does not guarantee future results. You should only trade with capital you can afford to lose. Always consult a qualified financial advisor before making trading decisions.
+  <div class="section-card">
+    <h2>9️⃣ Important Financial Disclaimer</h2>
+    <div class="warning-box">
+      ⚠️ <strong>IMPORTANT:</strong> Trading Insights provides trading signals and tools for
+      <strong>informational and educational purposes only</strong>. We are NOT a registered
+      financial advisor, broker, or investment firm. Nothing in this app constitutes financial
+      advice, investment recommendations, or an offer to buy or sell any financial instrument.
+      Forex, cryptocurrency, and CFD trading involves substantial risk of loss. Past performance
+      of signals does not guarantee future results. You should only trade with capital you can
+      afford to lose. Always consult a qualified financial advisor before making trading decisions.
     </div>
-  </section>
+  </div>
 
-  <!-- 10. Changes to Policy -->
-  <section>
-    <h2><span class="num">10</span> Changes to This Policy</h2>
+  <!-- 10. Changes to This Policy -->
+  <div class="section-card">
+    <h2>🔟 Changes to This Policy</h2>
     <p>We may update this Privacy Policy from time to time. When we do:</p>
     <ul>
       <li>We will update the "Last Updated" date at the top of this page</li>
       <li>Significant changes will be notified via push notification or in-app alert</li>
       <li>Continued use of the app after changes constitutes acceptance</li>
     </ul>
-    <p>We encourage you to review this policy periodically.</p>
-  </section>
+    <p style="margin-top:12px">We encourage you to review this policy periodically.</p>
+  </div>
 
   <!-- 11. Contact Us -->
-  <section>
-    <h2><span class="num">11</span> Contact Us</h2>
+  <div class="section-card">
+    <h2>📞 Contact Us</h2>
     <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please reach out:</p>
-    <div class="contact-grid">
-      <div class="contact-item">
-        <div class="label">📧 Email</div>
-        <div class="value">support.trading.insights@gmail.com</div>
-      </div>
-      <div class="contact-item">
-        <div class="label">💬 Live Chat</div>
-        <div class="value">Available in-app via the Support section</div>
-      </div>
-    </div>
-    <p style="margin-top:14px">We aim to respond to all inquiries within <strong style="color:#f9fafb">2 business days</strong>.</p>
-  </section>
+    <ul>
+      <li>📧 <strong>Email:</strong>
+        <a href="mailto:support.trading.insights@gmail.com" style="color:#1a73e8">support.trading.insights@gmail.com</a>
+      </li>
+      <li>💬 <strong>Live Chat:</strong> Available in-app via the Support section</li>
+    </ul>
+    <p style="margin-top:12px">We aim to respond to all inquiries within <strong>2 business days</strong>.</p>
+  </div>
 
 </main>
 
 <footer>
-  <p>© 2026 Trading Insights. All rights reserved.</p>
-  <p style="margin-top:6px"><a href="./terms.html">Terms &amp; Conditions</a> &nbsp;·&nbsp; <a href="./index.html">Home</a></p>
+  <div>
+    <a href="https://supporttradinginsights-byte.github.io/fxsignals/terms.html">Terms &amp; Conditions</a>
+    &middot;
+    <a href="https://supporttradinginsights-byte.github.io/fxsignals/index.html">Home</a>
+  </div>
+  <div class="copy">© 2026 Trading Insights. All rights reserved.</div>
 </footer>
 
 </body>
