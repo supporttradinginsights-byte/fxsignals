@@ -1,103 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Terms &amp; Conditions — Trading Insights</title>
-  <style>
-    :root {
-      --bg: #0a0e1a;
-      --surface: #111827;
-      --border: #1f2937;
-      --accent: #f59e0b;
-      --accent2: #10b981;
-      --text: #e5e7eb;
-      --muted: #9ca3af;
-      --heading: #f9fafb;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-      font-size: 15px;
-      line-height: 1.75;
-    }
-    header {
-      background: linear-gradient(135deg, #0a0e1a 0%, #111827 100%);
-      border-bottom: 1px solid var(--border);
-      padding: 28px 24px 24px;
-      text-align: center;
-    }
-    .logo-row {
-      display: flex; align-items: center; justify-content: center;
-      gap: 10px; margin-bottom: 6px;
-    }
-    .logo-icon {
-      width: 36px; height: 36px; background: var(--accent);
-      border-radius: 8px; display: flex; align-items: center;
-      justify-content: center; font-size: 18px;
-    }
-    .app-name { font-size: 20px; font-weight: 700; color: var(--heading); letter-spacing: 0.5px; }
-    .page-title { font-size: 26px; font-weight: 800; color: var(--heading); margin-top: 8px; }
-    .last-updated { font-size: 13px; color: var(--muted); margin-top: 6px; }
-    .badge {
-      display: inline-block;
-      background: rgba(245,158,11,0.15);
-      border: 1px solid rgba(245,158,11,0.4);
-      color: var(--accent); font-size: 11px; font-weight: 600;
-      padding: 3px 10px; border-radius: 20px;
-      text-transform: uppercase; letter-spacing: 1px; margin-top: 10px;
-    }
-    main { max-width: 760px; margin: 0 auto; padding: 32px 20px 60px; }
-    .intro-card {
-      background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.25);
-      border-radius: 12px; padding: 18px 20px; margin-bottom: 32px;
-      color: #a7f3d0; font-size: 14px;
-    }
-    .intro-card strong { color: #6ee7b7; }
-    section {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 14px; padding: 24px; margin-bottom: 20px;
-    }
-    section h2 {
-      font-size: 16px; font-weight: 700; color: var(--heading);
-      margin-bottom: 14px; display: flex; align-items: center; gap: 10px;
-    }
-    section h2 .num {
-      width: 26px; height: 26px; background: var(--accent); color: #000;
-      border-radius: 6px; font-size: 12px; font-weight: 800;
-      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-    }
-    section p { color: var(--text); margin-bottom: 10px; font-size: 14px; }
-    section p:last-child { margin-bottom: 0; }
-    ul { list-style: none; padding: 0; margin: 10px 0; }
-    ul li {
-      position: relative; padding-left: 20px; margin-bottom: 7px;
-      font-size: 14px; color: var(--text);
-    }
-    ul li::before { content: '▸'; position: absolute; left: 0; color: var(--accent); font-size: 11px; top: 1px; }
-    .warn-card {
-      background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.3);
-      border-radius: 10px; padding: 14px 16px; margin-top: 14px;
-      color: #fca5a5; font-size: 13px; line-height: 1.6;
-    }
-    .warn-card strong { color: #f87171; }
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
-    @media (max-width: 480px) { .contact-grid { grid-template-columns: 1fr; } }
-    .contact-item {
-      background: rgba(245,158,11,0.07); border: 1px solid rgba(245,158,11,0.2);
-      border-radius: 10px; padding: 14px;
-    }
-    .contact-item .label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); font-weight: 700; margin-bottom: 4px; }
-    .contact-item .value { font-size: 14px; color: var(--heading); font-weight: 600; }
-    footer {
-      text-align: center; padding: 24px 20px;
-      border-top: 1px solid var(--border); font-size: 12px; color: var(--muted);
-    }
-    footer a { color: var(--accent); text-decoration: none; }
-    a { color: var(--accent2); }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Terms &amp; Conditions — Trading Insights</title>
+<style>
+:root {
+  --bg: #0a0e1a;
+  --surface: #111827;
+  --border: #1f2937;
+  --accent: #f59e0b;
+  --accent2: #10b981;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --heading: #f9fafb;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+}
+header {
+  background: linear-gradient(135deg, #0a0e1a 0%, #111827 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 32px 24px 28px;
+  text-align: center;
+}
+.logo-row {
+  display: flex; align-items: center; justify-content: center;
+  gap: 10px; margin-bottom: 6px;
+}
+.logo-icon {
+  width: 40px; height: 40px; background: var(--accent);
+  border-radius: 10px; display: flex; align-items: center;
+  justify-content: center; font-size: 20px;
+}
+.app-name { font-size: 22px; font-weight: 700; color: var(--heading); }
+.page-title { font-size: 28px; font-weight: 800; color: var(--heading); margin-top: 8px; }
+.last-updated { font-size: 13px; color: var(--muted); margin-top: 6px; }
+.badge-row { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+.badge {
+  display: inline-block;
+  background: rgba(245,158,11,0.15);
+  border: 1px solid rgba(245,158,11,0.4);
+  color: var(--accent); font-size: 11px; font-weight: 600;
+  padding: 3px 12px; border-radius: 20px;
+  text-transform: uppercase; letter-spacing: 1px;
+}
+main { max-width: 780px; margin: 0 auto; padding: 36px 20px 64px; }
+
+/* ── TOP CARDS ── */
+.read-first {
+  background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.3);
+  border-radius: 12px; padding: 18px 22px; margin-bottom: 18px;
+  color: #a7f3d0; font-size: 14px;
+}
+.read-first strong { color: #6ee7b7; }
+
+.platform-decl {
+  background: rgba(59,130,246,0.08); border: 2px solid rgba(59,130,246,0.4);
+  border-radius: 14px; padding: 22px 26px; margin-bottom: 32px;
+}
+.platform-decl .pd-title {
+  font-size: 13px; font-weight: 800; color: #93c5fd;
+  text-transform: uppercase; letter-spacing: 0.7px; margin-bottom: 14px;
+}
+.platform-decl .pd-what {
+  font-size: 14px; color: #bfdbfe; margin-bottom: 12px; line-height: 1.6;
+}
+.platform-decl .pd-what strong { color: #93c5fd; }
+.pd-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 14px; }
+@media (max-width: 560px) { .pd-grid { grid-template-columns: 1fr; } }
+.pd-col { border-radius: 10px; padding: 12px 14px; }
+.pd-col.green { background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.25); }
+.pd-col.red   { background: rgba(239,68,68,0.08);  border: 1px solid rgba(239,68,68,0.25); }
+.pd-col .col-title { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 8px; }
+.pd-col.green .col-title { color: #34d399; }
+.pd-col.red   .col-title { color: #f87171; }
+.pd-col ul { list-style: none; padding: 0; }
+.pd-col ul li { font-size: 12.5px; padding-left: 16px; position: relative; margin-bottom: 5px; line-height: 1.5; }
+.pd-col.green ul li::before { content: '✓'; position: absolute; left: 0; color: #34d399; font-weight: 700; }
+.pd-col.red   ul li::before { content: '✗'; position: absolute; left: 0; color: #f87171; font-weight: 700; }
+.pd-col.green ul li { color: #a7f3d0; }
+.pd-col.red   ul li { color: #fca5a5; }
+
+/* ── SECTIONS ── */
+section {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 14px; padding: 26px 28px; margin-bottom: 18px;
+}
+section h2 {
+  font-size: 16px; font-weight: 700; color: var(--heading);
+  margin-bottom: 14px; display: flex; align-items: center; gap: 10px;
+}
+.num {
+  min-width: 28px; height: 28px; background: var(--accent); color: #000;
+  border-radius: 7px; font-size: 12px; font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+}
+.num.blue   { background: #3b82f6; color: #fff; }
+.num.orange { background: #f97316; color: #fff; }
+.num.purple { background: #8b5cf6; color: #fff; }
+.num.green  { background: #10b981; color: #fff; }
+.num.red    { background: #ef4444; color: #fff; }
+
+section p { color: var(--text); margin-bottom: 10px; font-size: 14px; }
+section p:last-child { margin-bottom: 0; }
+ul.list { list-style: none; padding: 0; margin: 10px 0; }
+ul.list li {
+  position: relative; padding-left: 20px; margin-bottom: 7px;
+  font-size: 14px; color: var(--text);
+}
+ul.list li::before { content: '▸'; position: absolute; left: 0; color: var(--accent); font-size: 11px; top: 2px; }
+
+h3.sub { font-size: 14px; font-weight: 700; color: var(--heading); margin: 16px 0 8px; }
+
+/* ── INLINE BOXES ── */
+.box {
+  border-radius: 10px; padding: 14px 16px; margin: 12px 0; font-size: 13px; line-height: 1.65;
+}
+.box strong { display: block; margin-bottom: 6px; }
+.box.warn   { background: rgba(239,68,68,0.08);  border: 1px solid rgba(239,68,68,0.3);  color: #fca5a5; }
+.box.warn strong  { color: #f87171; }
+.box.info   { background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.3); color: #bfdbfe; }
+.box.info strong  { color: #93c5fd; }
+.box.purple { background: rgba(139,92,246,0.08); border: 1px solid rgba(139,92,246,0.3); color: #ddd6fe; }
+.box.purple strong { color: #c4b5fd; }
+.box.orange { background: rgba(249,115,22,0.08); border: 1px solid rgba(249,115,22,0.3); color: #fed7aa; }
+.box.orange strong { color: #fb923c; }
+.box.green  { background: rgba(16,185,129,0.08); border: 1px solid rgba(16,185,129,0.3); color: #a7f3d0; }
+.box.green strong  { color: #6ee7b7; }
+.box ul { list-style: none; padding: 0; margin: 6px 0 0; }
+.box ul li { position: relative; padding-left: 16px; margin-bottom: 5px; font-size: 13px; }
+.box ul li::before { content: '•'; position: absolute; left: 0; }
+
+/* flow diagram */
+.flow {
+  display: flex; align-items: center; flex-wrap: wrap;
+  gap: 6px; margin: 14px 0;
+}
+.flow-step {
+  background: rgba(245,158,11,0.12); border: 1px solid rgba(245,158,11,0.35);
+  border-radius: 8px; padding: 7px 14px; font-size: 12.5px; font-weight: 600;
+  color: var(--accent); text-align: center; white-space: nowrap;
+}
+.flow-arrow { color: var(--muted); font-size: 16px; }
+
+/* contact grid */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
+@media (max-width: 480px) { .contact-grid { grid-template-columns: 1fr; } }
+.contact-item {
+  background: rgba(245,158,11,0.07); border: 1px solid rgba(245,158,11,0.2);
+  border-radius: 10px; padding: 14px;
+}
+.contact-item .ci-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); font-weight: 700; margin-bottom: 4px; }
+.contact-item .ci-val { font-size: 13.5px; color: var(--heading); font-weight: 600; }
+
+footer {
+  text-align: center; padding: 24px 20px;
+  border-top: 1px solid var(--border); font-size: 12px; color: var(--muted);
+}
+footer a { color: var(--accent); text-decoration: none; }
+a { color: var(--accent2); }
+</style>
 </head>
 <body>
 
@@ -108,183 +176,529 @@
   </div>
   <div class="page-title">Terms &amp; Conditions</div>
   <div class="last-updated">Last Updated: June 2026</div>
-  <div class="badge">Effective Immediately</div>
+  <div class="badge-row">
+    <span class="badge">Effective Immediately</span>
+    <span class="badge">Google Play Compliant</span>
+  </div>
 </header>
 
 <main>
 
-  <div class="intro-card">
-    <strong>Please read these Terms carefully.</strong> By downloading, installing, or using Trading Insights ("App"), you agree to be bound by these Terms &amp; Conditions. If you do not agree, do not use the App.
+<!-- READ FIRST -->
+<div class="read-first">
+  <strong>Please read these Terms carefully before using Trading Insights.</strong>
+  By downloading, installing, or accessing the app in any way, you confirm you have read,
+  understood, and agreed to these Terms &amp; Conditions in full.
+  If you do not agree, uninstall the app and do not use any of our services.
+</div>
+
+<!-- PLATFORM NATURE DECLARATION -->
+<div class="platform-decl">
+  <div class="pd-title">📋 What Trading Insights Is — Full Platform Declaration</div>
+  <p class="pd-what">
+    Trading Insights is a <strong>market analysis signal subscription service</strong> and
+    <strong>automation software (EA) provider</strong>. We publish algorithmically generated
+    market analysis on forex and commodities, indices and cryptocurrency pairs. Users may optionally purchase our
+    Expert Advisor (EA) software to automate signal implementation on their
+    <strong>own independently held broker accounts</strong>.
+  </p>
+  <div class="pd-grid">
+    <div class="pd-col green">
+      <div class="col-title">✅ What This App IS</div>
+      <ul>
+        <li>Market analysis signal subscription service</li>
+        <li>Optional EA automation software vendor</li>
+        <li>Educational content &amp; market data platform</li>
+        <li>Technology &amp; software company</li>
+        <li>Tools for independent traders to use at their own discretion</li>
+      </ul>
+    </div>
+    <div class="pd-col red">
+      <div class="col-title">✗ What This App Is NOT</div>
+      <ul>
+        <li>NOT a broker or financial dealer</li>
+        <li>NOT a licensed investment advisor</li>
+        <li>NOT a managed account or portfolio service</li>
+        <li>NOT a financial institution or money services business</li>
+        <li>NOT a guarantor of trading profits or results</li>
+        <li>NOT accessing or controlling your broker account</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 1 -->
+<section>
+  <h2><span class="num">1</span> Acceptance of Terms</h2>
+  <p>By downloading, installing, accessing, or using Trading Insights (the "App"), its website,
+  or any related services (collectively the "Services"), you confirm that you have read,
+  understood, and agree to be legally bound by these Terms &amp; Conditions ("Terms") and
+  our Privacy Policy.</p>
+  <p>These Terms form a binding legal agreement between you ("User") and Trading Insights
+  ("we," "us," "our"). If you do not agree to any part of these Terms, you must not use
+  the Services. Continued use constitutes ongoing acceptance.</p>
+</section>
+
+<!-- 2 -->
+<section>
+  <h2><span class="num">2</span> Eligibility</h2>
+  <p>To use Trading Insights you must:</p>
+  <ul class="list">
+    <li>Be at least <strong style="color:var(--heading)">18 years of age</strong> or the legal age of majority in your jurisdiction</li>
+    <li>Have full legal capacity to enter into binding contracts</li>
+    <li>Confirm it is lawful in your jurisdiction to access market analysis and financial information services</li>
+    <li>Provide accurate and complete registration information</li>
+    <li>Not be prohibited by law from engaging with financial data or automation software tools</li>
+  </ul>
+  <p>We reserve the right to terminate accounts that do not meet eligibility requirements at any time without any notice</p>
+</section>
+
+<!-- 3 -->
+<section>
+  <h2><span class="num blue">3</span> Complete Description of Services</h2>
+  <p>Trading Insights offers the following services, all of which are subject to these Terms:</p>
+
+  <h3 class="sub">3.1 — Free Trial</h3>
+  <p>New users receive a limited free trial period during which they can view market analysis
+  signals within the app at no cost. Trial access may be limited in scope, duration, or
+  signal frequency. No payment details are required to start a trial.</p>
+
+  <h3 class="sub">3.2 — Signal Subscription Service</h3>
+  <p>After the trial ends, continued access to market analysis signals requires a paid
+  subscription. Subscribers receive algorithmically generated buy/sell market analysis on
+  selected forex, Commodities, Indices and cryptocurrency pairs. These signals are published as
+  <strong style="color:var(--heading)">market analysis data for informational and
+  reference purposes</strong> — not as personalized investment instructions.</p>
+
+  <h3 class="sub">3.3 — Expert Advisor (EA) Automation Software (Optional)</h3>
+  <p>As an optional add-on, subscribers may purchase a license to download our Expert Advisor
+  (EA) — a software plugin for MetaTrader 4/5. The EA reads the same signal data published
+  in the app and can automatically place corresponding orders on the user's own broker account
+  according to the user's own configured risk parameters.</p>
+
+  <div class="box info">
+    <strong>How the complete service flow works:</strong>
+    <div class="flow">
+      <span class="flow-step">Trading Insights<br/>Publishes Signal Data</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">User Views Signal<br/>in App (optional)</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">User's EA Software<br/>(on user's own device)</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">User's Own<br/>Broker Account</span>
+    </div>
+    At every step after signal publication, the process is entirely within the
+    <strong>user's own control and infrastructure</strong>. Trading Insights does not have
+    access to the user's device, EA configuration, or broker account at any point.
+  </div>
+</section>
+
+<!-- 4 -->
+<section>
+  <h2><span class="num blue">4</span> How Market Analysis Signals Work — Legal Distinction</h2>
+  <p>This section is critical for understanding the legal nature of Trading Insights' services.</p>
+
+  <h3 class="sub">4.1 — Signals Are Market Analysis, Not Investment Advice</h3>
+  <p>The signals published by Trading Insights are <strong style="color:var(--heading)">algorithmically generated market analysis outputs</strong> based on technical indicators, price action models, and automated analysis engines. They indicate potential market direction as assessed by our algorithms at a given moment.</p>
+  <p>These signals are <strong style="color:var(--heading)">data points for your independent consideration</strong> — equivalent in legal character to a technical analysis published in a financial newspaper, a charting indicator result, or a market analyst's opinion. They are not:</p>
+  <ul class="list">
+    <li>Personalized investment advice tailored to your financial situation</li>
+    <li>A direction or instruction to you to trade</li>
+    <li>A guarantee or prediction of price movement</li>
+    <li>A managed investment service or discretionary trading authority</li>
+  </ul>
+
+  <h3 class="sub">4.2 — Your Independent Decision</h3>
+  <p>Whether you choose to act on any signal — manually or via the EA — is entirely your own
+  independent decision. You bear full responsibility for that decision and its financial
+  consequences. Trading Insights publishes analysis; you decide what to do with it.</p>
+
+  <div class="box warn">
+    <strong>⚠️ No Signal Guarantees:</strong>
+    Market analysis signals may be incorrect. Markets are unpredictable. Any signal can
+    result in a losing trade. Past accuracy of signals does not predict future results.
+    Trading Insights makes no representation that following signals will produce profitable
+    outcomes. Many trades based on signals will result in losses.
+  </div>
+</section>
+
+<!-- 5 -->
+<section>
+  <h2><span class="num blue">5</span> Expert Advisor (EA) — Automation Software License &amp; Terms</h2>
+
+  <h3 class="sub">5.1 — What the EA Does</h3>
+  <p>The EA is a software plugin (a compiled .ex4 / .ex5 file) for MetaTrader 4 or 5 that:</p>
+  <ul class="list">
+    <li>Connects to the Trading Insights signal data feed via API</li>
+    <li>Reads incoming signal data (entry price, direction, stop loss, take profit levels)</li>
+    <li>Automatically places corresponding orders on your broker account according to
+        <strong style="color:var(--heading)">parameters that you yourself configure</strong>
+        (lot size, risk %, max open trades, etc.)</li>
+    <li>Runs on <strong style="color:var(--heading)">your own device or VPS</strong>,
+        connected to <strong style="color:var(--heading)">your own broker account</strong>
+        via your own MetaTrader installation</li>
+  </ul>
+
+  <h3 class="sub">5.2 — What Trading Insights Does NOT Do via the EA</h3>
+  <ul class="list">
+    <li>We do <strong style="color:var(--heading)">NOT</strong> have access to your
+        broker account, login credentials, or account balance at any time</li>
+    <li>We do <strong style="color:var(--heading)">NOT</strong> monitor, view, or
+        record your individual trades or positions</li>
+    <li>We do <strong style="color:var(--heading)">NOT</strong> control the EA's
+        behavior once it is deployed on your system — all behavior is governed by
+        your own settings</li>
+    <li>We do <strong style="color:var(--heading)">NOT</strong> have the ability to
+        start, stop, modify, or override the EA remotely</li>
+    <li>We do <strong style="color:var(--heading)">NOT</strong> manage, operate, or
+        take discretionary authority over your trading account in any way</li>
+    <li>We do <strong style="color:var(--heading)">NOT</strong> hold, receive, or
+        transmit any of your trading funds</li>
+  </ul>
+
+  <div class="box info">
+    <strong>📌 Technical Clarification:</strong>
+    The EA connects outbound to Trading Insights servers to receive signal data (read-only
+    data pull). This connection is one-directional for data only — Trading Insights receives
+    nothing from your trading environment. Your broker credentials, account data, positions,
+    and funds are never transmitted to or accessible by Trading Insights at any point.
   </div>
 
-  <section>
-    <h2><span class="num">1</span> Acceptance of Terms</h2>
-    <p>By accessing or using the Trading Insights mobile application, website, or any related services (collectively, the "Services"), you acknowledge that you have read, understood, and agree to be bound by these Terms &amp; Conditions and our Privacy Policy.</p>
-    <p>These Terms apply to all users, including subscribers, visitors, and any other individuals who access the Services. If you do not agree to any part of these Terms, you must not use the Services.</p>
-  </section>
+  <h3 class="sub">5.3 — Your Full Responsibility as EA Operator</h3>
+  <p>By deploying the EA, you expressly acknowledge and accept that:</p>
+  <ul class="list">
+    <li>You are the sole operator of the EA — you decide to install it, run it, and configure it</li>
+    <li>You set all risk parameters yourself: lot size, risk per trade, maximum drawdown, maximum
+        concurrent trades, and all other inputs</li>
+    <li>You are responsible for testing the EA thoroughly in a
+        <strong style="color:var(--heading)">demo account environment</strong> before any live use</li>
+    <li>Every order placed by the EA on your account is legally and financially
+        <strong style="color:var(--heading)">your own independent trade</strong> — placed by
+        software you chose to activate with your own settings</li>
+    <li>You are responsible for monitoring the EA's operation and stopping it if conditions change</li>
+    <li>You are responsible for ensuring your broker permits the use of automated trading tools</li>
+    <li>You are responsible for ensuring your use of the EA complies with all laws applicable
+        in your jurisdiction</li>
+  </ul>
 
-  <section>
-    <h2><span class="num">2</span> Eligibility</h2>
-    <p>To use Trading Insights, you must:</p>
+  <h3 class="sub">5.4 — Risk Management Is Your Obligation</h3>
+  <p>Automated trading via the EA carries significant and potentially amplified financial risks.
+  You must set appropriate risk management parameters before activating the EA. Trading Insights
+  strongly recommends never risking more than you can afford to lose on any automated system.</p>
+
+  <h3 class="sub">5.5 — Software License Terms</h3>
+  <ul class="list">
+    <li>The EA is licensed to you personally for individual use only for the duration of your active subscription</li>
+    <li>The license is non-exclusive, non-transferable, and non-sublicensable</li>
+    <li>You may not reverse-engineer, decompile, modify, resell, or redistribute the EA files</li>
+    <li>The EA license is a <strong style="color:var(--heading)">technology software transaction</strong>
+        — not a financial service engagement or managed trading arrangement</li>
+    <li>We provide no guarantee of compatibility with all broker platforms,
+        MetaTrader builds, VPS environments, or internet conditions</li>
+  </ul>
+
+  <div class="box warn">
+    <strong>⚠️ Full EA Financial Liability Disclaimer:</strong>
+    Trading Insights, its founder, CEO, developers, and operators accept zero liability for
+    any financial outcome — profit or loss — arising from your use of the EA. This includes
+    losses from automated trades placed by the EA, connectivity or API failures, broker
+    execution issues, slippage, your own configuration errors, failure to monitor the system,
+    or any market condition whatsoever. You accept all financial risk entirely and exclusively.
+  </div>
+</section>
+
+<!-- 6 -->
+<section>
+  <h2><span class="num">6</span> Subscription Plans &amp; Payment</h2>
+  <p>Access to signals after the free trial, and access to the EA, require a paid subscription
+  processed through <strong style="color:var(--heading)">Google Play Billing</strong>.</p>
+  <ul class="list">
+    <li>Subscription fees are charged in advance for the selected billing period</li>
+    <li>Subscriptions <strong style="color:var(--heading)">auto-renew</strong> unless cancelled
+        at least 24 hours before the renewal date</li>
+    <li>Renewal charges are made within 24 hours before the current period ends</li>
+    <li>Manage or cancel anytime: Google Play Store → Profile →
+        Payments &amp; Subscriptions → Subscriptions</li>
+    <li>Prices are as shown in the app and may change with advance notice</li>
+  </ul>
+  <p><strong style="color:var(--heading)">Refund Policy:</strong> Governed by Google Play's
+  standard refund policy. Request refunds via Google Play within the eligible window.
+  For unresolved billing issues, contact our support within 7 days of the charge.</p>
+  <div class="box green">
+    <strong>📌 Important Classification:</strong>
+    Subscription fees are payment for access to a market analysis information service and/or
+    software license. They are NOT investments, trading capital, deposits, funds under
+    management, or payment for financial advisory or managed trading services.
+  </div>
+</section>
+
+<!-- 7 -->
+<section>
+  <h2><span class="num">7</span> Device Licensing &amp; Account Usage</h2>
+  <ul class="list">
+    <li>Each account may be registered to a limited number of devices as specified by your plan</li>
+    <li>Account credentials must not be shared with other individuals</li>
+    <li>You may not use bots, scrapers, or automated tools to access the Services beyond the EA</li>
+    <li>Account sharing, reselling access, or transferring subscriptions is strictly prohibited</li>
+    <li>Violations may result in immediate account suspension without refund</li>
+  </ul>
+</section>
+
+<!-- 8 -->
+<section>
+  <h2><span class="num">8</span> Prohibited Uses</h2>
+  <p>You agree NOT to use Trading Insights to:</p>
+  <ul class="list">
+    <li>Engage in any activity that violates applicable laws or regulations in your jurisdiction</li>
+    <li>Circumvent our systems, security, or access controls</li>
+    <li>Distribute, reproduce, or resell signals, EA files, or any app content</li>
+    <li>Misrepresent to any third party that Trading Insights is your broker, investment advisor,
+        or fund manager</li>
+    <li>Claim that any EA trade was "directed" or "managed" by Trading Insights</li>
+    <li>Use the app or EA in jurisdictions where doing so violates local law without first
+        obtaining qualified legal clearance</li>
+    <li>Harass, threaten, or abuse Trading Insights staff or other users</li>
+    <li>Create fraudulent accounts or manipulate the referral program</li>
+  </ul>
+</section>
+
+<!-- 9 -->
+<section>
+  <h2><span class="num red">9</span> Financial Risk Disclaimer</h2>
+  <div class="box warn">
+    <strong>⚠️ MANDATORY RISK WARNING — READ CAREFULLY:</strong>
+    <br/><br/>
+    Trading Insights is a market analysis signal service and software tools provider.
+    We are NOT a registered broker, investment advisor, fund manager, money services
+    business, or licensed financial professional in any jurisdiction worldwide.
+    <br/><br/>
+    <strong>Our services must not be treated as:</strong>
     <ul>
-      <li>Be at least <strong style="color:#f9fafb">18 years of age</strong> or the age of legal majority in your jurisdiction</li>
-      <li>Have the legal capacity to enter into binding agreements</li>
-      <li>Not be prohibited from using financial services under applicable laws</li>
-      <li>Provide accurate and truthful registration information</li>
+      <li>Personalized financial or investment advice</li>
+      <li>A recommendation or instruction to buy, sell, or hold any asset</li>
+      <li>A guarantee of profit, a specific return, or any particular outcome</li>
+      <li>Managed portfolio or discretionary trading services</li>
+      <li>A substitute for advice from a qualified, licensed financial professional</li>
     </ul>
-    <p>We reserve the right to refuse service and terminate accounts that do not meet these requirements.</p>
-  </section>
+    <br/>
+    Forex, cryptocurrency, and CFD trading involves <strong>substantial risk of loss</strong>
+    and is not appropriate for all individuals. Losses can equal or exceed your total invested
+    capital. The use of automated trading (EA) does not reduce this risk and may amplify it.
+    <br/><br/>
+    Always seek independent advice from a qualified financial advisor licensed in your
+    jurisdiction before trading. Only trade with money you can afford to lose entirely.
+    <br/><br/>
+    <strong>The developer, founder, CEO, and operators of Trading Insights are not
+    personally liable for any financial losses you sustain from your independent
+    trading activities, whether manual or automated via the EA.</strong>
+  </div>
+</section>
 
-  <section>
-    <h2><span class="num">3</span> Subscription Plans &amp; Payment</h2>
-    <p>Access to premium features of Trading Insights requires a paid subscription. All payments are processed securely through <strong style="color:#f9fafb">Google Play Billing</strong>. By purchasing a subscription:</p>
+<!-- 10 -->
+<section>
+  <h2><span class="num blue">10</span> No Advisory, Brokerage, or Managed Trading Relationship</h2>
+  <p>Your use of Trading Insights — including subscribing to signals and deploying the EA —
+  does <strong style="color:var(--heading)">NOT</strong> create any of the following
+  relationships with Trading Insights, its founder, CEO, developers, or operators:</p>
+  <ul class="list">
+    <li>Investment advisory, fiduciary, or trust relationship</li>
+    <li>Broker–client or dealer–client relationship</li>
+    <li>Fund manager–investor or discretionary manager–account holder relationship</li>
+    <li>Agent–principal relationship authorizing us to act on your behalf</li>
+    <li>Any relationship in which Trading Insights bears responsibility for your trading outcomes</li>
+  </ul>
+  <div class="box info">
+    <strong>Plain Language Summary:</strong>
+    When a signal appears in the app, Trading Insights has published market analysis data —
+    similar to a weather service publishing a forecast. You independently decide whether to
+    act on it and how. When the EA places a trade, it is executing your automated instruction
+    (as set up by you) based on data you subscribed to receive. At no point does Trading
+    Insights trade on your behalf, manage your account, or bear any trading responsibility.
+  </div>
+</section>
+
+<!-- 11 -->
+<section>
+  <h2><span class="num orange">11</span> Jurisdictional &amp; Regulatory Compliance</h2>
+  <p>You are <strong style="color:var(--heading)">solely responsible</strong> for determining
+  whether your use of this app, and any trading you independently conduct, complies with all
+  laws applicable to you. This includes:</p>
+  <ul class="list">
+    <li>Foreign exchange regulations in your country</li>
+    <li>Securities, commodities, and investment regulations</li>
+    <li>Cryptocurrency and digital asset regulations</li>
+    <li>Capital controls, cross-border payment rules</li>
+    <li>Tax reporting and compliance on any trading profits or losses</li>
+    <li>AML and KYC requirements of your chosen broker</li>
+  </ul>
+
+  <div class="box orange">
+    <strong>⚠️ Notice for Users in Pakistan &amp; Other Regulated Jurisdictions:</strong>
+    <br/><br/>
+    Trading Insights is a technology company operating a market analysis and software
+    platform. It is not registered with, licensed by, or regulated by the Securities and
+    Exchange Commission of Pakistan (SECP), the State Bank of Pakistan (SBP), or any
+    financial authority in any jurisdiction.
+    <br/><br/>
+    <strong>By using this app, Pakistani users (and users in all jurisdictions) confirm:</strong>
     <ul>
-      <li>Subscription fees are charged in advance for the selected period (1, 2, 3, or 6 months as selected)</li>
-      <li>Subscriptions <strong style="color:#f9fafb">automatically renew</strong> at the end of each billing period unless cancelled at least 24 hours before the renewal date</li>
-      <li>Your Google Play account will be charged for renewal within 24 hours prior to the end of the current period</li>
-      <li>You can manage or cancel anytime via: Google Play Store → Profile → Payments &amp; Subscriptions → Subscriptions</li>
-      <li>All prices are as displayed in the app and may change, with advance notice given before the next billing cycle</li>
+      <li>Their trading activities — manual or automated via EA — are conducted through their own independently chosen and separately licensed brokers</li>
+      <li>Trading Insights does not execute, facilitate, or manage their trades</li>
+      <li>Trading Insights does not hold, receive, or transmit any of their trading funds</li>
+      <li>They are solely responsible for compliance with SBP foreign exchange regulations, SECP rules, and all other applicable laws regarding their independent trading activities</li>
+      <li>Trading Insights is a market analysis information service and software vendor — not a financial service requiring SECP or SBP registration</li>
+      <li>The developer, founder, CEO, and operators are technology professionals and bear no responsibility for users' independent regulatory compliance</li>
     </ul>
-    <p><strong style="color:#f9fafb">Refund Policy:</strong> Refunds follow Google Play's refund policy. Please request refunds directly through Google Play within the eligible window. For billing issues not resolved by Google Play, contact our support within 7 days.</p>
-  </section>
+    <br/>
+    If you are unsure whether using a market analysis service or automation software is
+    permitted in your jurisdiction, consult a qualified local legal advisor before proceeding.
+  </div>
+</section>
 
-  <section>
-    <h2><span class="num">4</span> Device Licensing &amp; Account Usage</h2>
-    <p>Your Trading Insights subscription is tied to your registered account and device:</p>
+<!-- 12 -->
+<section>
+  <h2><span class="num purple">12</span> Developer, Founder &amp; Operator Indemnification</h2>
+  <p>By using this application, you fully and expressly agree to the following protections
+  for the individuals who build and operate Trading Insights:</p>
+  <div class="box purple">
+    <strong>🛡️ Personal Liability Protection:</strong>
+    <br/><br/>
+    The founder, CEO, directors, developers, employees, and contractors of Trading Insights
+    are technology professionals. They are not financial advisors, brokers, or regulated
+    financial service providers. They do not personally guarantee, manage, or take
+    responsibility for your trading outcomes.
+    <br/><br/>
+    <strong>You agree none of these individuals shall be personally liable for:</strong>
     <ul>
-      <li>Each account may be registered to a limited number of devices (as per your plan)</li>
-      <li>You may not share your account credentials with other individuals</li>
-      <li>You may not use automation, bots, or scripts to access the Services</li>
-      <li>Account sharing, reselling, or transferring subscriptions is strictly prohibited</li>
+      <li>Financial losses from your trading activities (manual or automated via EA)</li>
+      <li>Regulatory, tax, or legal issues arising from your independent trading</li>
+      <li>Your decisions based on signals or analysis viewed in the app</li>
+      <li>Actions, failures, or terms of your independently chosen broker</li>
+      <li>Tax liabilities, fines, or penalties on your trading profits</li>
+      <li>Any losses from market conditions, EA malfunction, connectivity failures,
+          or broker outages outside our control</li>
     </ul>
-    <p>Violation of these terms may result in immediate account suspension without refund.</p>
-  </section>
+  </div>
+  <p style="margin-top:16px;"><strong style="color:var(--heading)">User Indemnification:</strong>
+  You agree to indemnify and hold harmless Trading Insights, its founder, CEO, directors,
+  employees, and contractors from any claims, damages, fines, legal proceedings, or costs
+  (including legal fees) arising from: (a) your use of the Services; (b) your violation
+  of these Terms; (c) your independent trading activities and regulatory consequences;
+  (d) your violation of any applicable law; (e) any misrepresentation to any third party
+  about the nature of these Services.</p>
+</section>
 
-  <section>
-    <h2><span class="num">5</span> Expert Advisor (EA) License</h2>
-    <p>If your subscription includes access to our Expert Advisor (EA):</p>
-    <ul>
-      <li>The EA is licensed to you for personal use only — not for redistribution</li>
-      <li>You may not reverse-engineer, decompile, or modify the EA files</li>
-      <li>EA access is granted for the duration of your active subscription only</li>
-      <li>We provide no guarantee that the EA will function with all broker platforms or MetaTrader versions</li>
-      <li>You are responsible for testing the EA in a demo environment before live trading</li>
-    </ul>
-  </section>
+<!-- 13 -->
+<section>
+  <h2><span class="num">13</span> Intellectual Property</h2>
+  <p>All content within Trading Insights — including but not limited to signal algorithms,
+  EA software code, app design, graphics, logos, text, and data models — is the exclusive
+  intellectual property of Trading Insights, protected under applicable copyright,
+  trademark, and software law.</p>
+  <ul class="list">
+    <li>You are granted a limited, personal, non-transferable license to use the app and EA</li>
+    <li>You may not copy, reproduce, resell, or distribute any content or software</li>
+    <li>You may not reverse-engineer, decompile, or modify the EA or any app code</li>
+    <li>Unauthorized use will result in immediate termination and legal action</li>
+  </ul>
+</section>
 
-  <section>
-    <h2><span class="num">6</span> Prohibited Uses</h2>
-    <p>You agree NOT to:</p>
-    <ul>
-      <li>Use the Services for any unlawful purpose or to violate any regulations</li>
-      <li>Attempt to gain unauthorized access to our systems or other users' accounts</li>
-      <li>Distribute, sell, or sublicense any content from Trading Insights</li>
-      <li>Use trading signals in a way that violates your broker's terms of service</li>
-      <li>Engage in any activity that disrupts or interferes with the Services</li>
-      <li>Create fake accounts or misrepresent your identity</li>
-      <li>Harass, threaten, or abuse our staff or other users</li>
-    </ul>
-  </section>
+<!-- 14 -->
+<section>
+  <h2><span class="num">14</span> Limitation of Liability</h2>
+  <p>To the maximum extent permitted by applicable law, Trading Insights, its founder, CEO,
+  and operators shall not be liable for:</p>
+  <ul class="list">
+    <li>Any trading losses, lost profits, or financial damages arising from signals or EA use</li>
+    <li>Service interruptions, API outages, or technical failures outside our reasonable control</li>
+    <li>Your broker's platform performance, execution quality, spreads, or outages</li>
+    <li>Regulatory actions, fines, or legal consequences arising from your independent trading</li>
+    <li>Losses from your EA configuration choices or failure to monitor the system</li>
+    <li>Any indirect, consequential, incidental, or punitive damages of any kind</li>
+  </ul>
+  <p>Our maximum aggregate liability for any claim is limited to the subscription fees you
+  paid in the 30 days immediately prior to the claim. These limits apply even if we were
+  advised of the possibility of such damages.</p>
+</section>
 
-  <section>
-    <h2><span class="num">7</span> Financial Risk Disclaimer</h2>
-    <div class="warn-card">
-      <strong>⚠️ CRITICAL DISCLAIMER — PLEASE READ CAREFULLY:</strong>
-      <br/><br/>
-      Trading Insights provides trading signals, tools, and educational content for <strong>informational purposes only</strong>. We are <strong>NOT</strong> a registered financial advisor, investment advisor, broker-dealer, or any form of licensed financial professional.
-      <br/><br/>
-      <strong>Nothing in this application constitutes:</strong>
-      <br/>• Financial or investment advice
-      <br/>• A recommendation to buy or sell any asset
-      <br/>• A guarantee of profits or specific results
-      <br/>• Professional financial consultation
-      <br/><br/>
-      Forex, cryptocurrency, and CFD trading involves <strong>substantial risk of loss</strong> and may not be suitable for all investors. You could lose some or all of your invested capital. Past performance of any signal or strategy does not guarantee future results.
-      <br/><br/>
-      Always conduct your own research and consult a qualified financial advisor before making any trading decisions. Only trade with capital you can afford to lose entirely.
+<!-- 15 -->
+<section>
+  <h2><span class="num">15</span> Termination</h2>
+  <p>We may suspend or terminate your account without any notice, if you violate these Terms, engage
+  in fraudulent or abusive behavior, fail to make required payments, or use the Services
+  for illegal purposes. You may cancel your subscription anytime via Google Play.</p>
+  <p>Upon termination, your right to access the Services and use the EA ceases immediately.
+  Sections 9, 10, 11, 12, 13, and 14 survive termination indefinitely.</p>
+</section>
+
+<!-- 16 -->
+<section>
+  <h2><span class="num">16</span> Modifications to Terms</h2>
+  <p>We may update these Terms at any time. Material changes will be communicated via
+  in-app notification or push alert. The updated "Last Updated" date will always reflect
+  the most recent revision. Continued use after changes constitutes acceptance.
+  If you disagree with changes, you must stop using the Services.</p>
+</section>
+
+<!-- 17 -->
+<section>
+  <h2><span class="num orange">17</span> Governing Law &amp; Disputes</h2>
+  <p>These Terms are governed by generally applicable principles of international commercial
+  and technology law. Trading Insights operates as a global technology platform.</p>
+  <ul class="list">
+    <li>Disputes shall first be addressed through good-faith written negotiation (30-day period)</li>
+    <li>Unresolved disputes will be submitted to binding arbitration, conducted in English</li>
+    <li>Arbitration awards are final and binding</li>
+  </ul>
+  <p style="margin-top:12px;"><strong style="color:var(--heading)">Scope Limitation:</strong>
+  Any legal dispute under these Terms is strictly limited to the provision of information
+  services and software licenses, and associated subscription fees. Disputes concerning
+  your independent trading outcomes, broker relationships, or regulatory matters are
+  entirely outside the scope of these Terms and Trading Insights' liability.</p>
+</section>
+
+<!-- 18 -->
+<section>
+  <h2><span class="num">18</span> Referral Credits Program</h2>
+  <ul class="list">
+    <li>You may earn account credits when referrals complete a paid subscription</li>
+    <li>Credits are a loyalty reward only — they have no cash value and are not a
+        financial instrument, investment, or deposit of any kind</li>
+    <li>Cash withdrawal of referral credits is
+        <strong style="color:var(--heading)">not available</strong> in the current
+        version. If introduced in future, these Terms will be updated and you will be
+        notified in-app before activation</li>
+    <li>Credits obtained through self-referrals, fake accounts, or any abuse may be
+        withheld or revoked without notice</li>
+    <li>The referral program may be modified or discontinued at any time at our discretion</li>
+  </ul>
+</section>
+
+<!-- 19 -->
+<section>
+  <h2><span class="num green">19</span> Contact Us</h2>
+  <p>For support, legal inquiries, or questions about these Terms:</p>
+  <div class="contact-grid">
+    <div class="contact-item">
+      <div class="ci-label">📧 Email</div>
+      <div class="ci-val">support.trading.insights@gmail.com</div>
     </div>
-  </section>
-
-  <section>
-    <h2><span class="num">8</span> Intellectual Property</h2>
-    <p>All content within Trading Insights — including but not limited to trading signals, algorithms, software code, design, text, graphics, logos, and the Expert Advisor — is the exclusive intellectual property of Trading Insights and is protected by copyright, trademark, and other applicable laws.</p>
-    <ul>
-      <li>You are granted a limited, non-exclusive, non-transferable license to use the app for personal purposes</li>
-      <li>You may not copy, reproduce, or distribute any content without written permission</li>
-      <li>Unauthorized use of our intellectual property will result in immediate termination and legal action</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2><span class="num">9</span> Limitation of Liability</h2>
-    <p>To the maximum extent permitted by applicable law:</p>
-    <ul>
-      <li>Trading Insights shall not be liable for any trading losses, financial damages, or lost profits arising from use of our signals or EA</li>
-      <li>Our total liability for any claim shall not exceed the subscription fee paid in the 30 days prior to the claim</li>
-      <li>We are not liable for service interruptions, technical failures, or data loss outside our reasonable control</li>
-      <li>We are not responsible for your broker's platform performance, spreads, or execution quality</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2><span class="num">10</span> Termination</h2>
-    <p>We reserve the right to suspend or terminate your account at any time if you:</p>
-    <ul>
-      <li>Violate any provision of these Terms</li>
-      <li>Engage in fraudulent activity or abuse</li>
-      <li>Fail to make required payments</li>
-      <li>Misuse the Services in any way</li>
-    </ul>
-    <p>You may terminate your account at any time by contacting support. Upon termination, your right to use the Services ceases immediately. Sections 7, 8, and 9 survive termination.</p>
-  </section>
-
-  <section>
-    <h2><span class="num">11</span> Modifications to Terms</h2>
-    <p>We reserve the right to modify these Terms at any time. We will notify you of significant changes via:</p>
-    <ul>
-      <li>In-app notification or push notification</li>
-      <li>Updated "Last Updated" date on this page</li>
-      <li>Requiring re-acceptance within the app for material changes</li>
-    </ul>
-    <p>Continued use of the Services after changes constitutes acceptance of the updated Terms.</p>
-  </section>
-
-  <section>
-    <h2><span class="num">12</span> Governing Law</h2>
-    <p>These Terms shall be governed by and construed in accordance with applicable laws. Any disputes arising from these Terms or use of the Services shall be resolved through good-faith negotiation first, followed by binding arbitration if necessary.</p>
-  </section>
-
-  <section>
-    <h2><span class="num">13</span> Referral Credits Program</h2>
-    <p>Trading Insights offers an optional referral rewards program. You may earn account credits when someone you refer completes a paid subscription, and credits may be applied toward subscription purchases or transferred to other registered users, subject to limits we may set at our discretion.</p>
-    <ul>
-      <li>Referral credits have no cash value and are a loyalty reward, not an investment product or deposit</li>
-      <li>Cash withdrawal of referral credits is <strong style="color:#f9fafb">not available in the current version of the app</strong>. If this feature is introduced in a future update, these Terms will be updated accordingly and you will be notified in-app before it becomes available to you</li>
-      <li>We reserve the right to withhold, adjust, or revoke credits obtained through self-referrals, fake accounts, chargebacks, or any other form of abuse</li>
-      <li>The referral program is offered at our discretion and may be modified, paused, or discontinued at any time</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2><span class="num">14</span> Contact Us</h2>
-    <p>For questions, support, or legal matters regarding these Terms:</p>
-    <div class="contact-grid">
-      <div class="contact-item">
-        <div class="label">📧 Email</div>
-        <div class="value">support.trading.insights@gmail.com</div>
-      </div>
-      <div class="contact-item">
-        <div class="label">💬 Live Chat</div>
-        <div class="value">Available in-app via the Support section</div>
-      </div>
+    <div class="contact-item">
+      <div class="ci-label">💬 In-App Support</div>
+      <div class="ci-val">Live chat in the Support section of the app</div>
     </div>
-  </section>
+  </div>
+</section>
 
 </main>
 
 <footer>
   <p>© 2026 Trading Insights. All rights reserved.</p>
-  <p style="margin-top:6px"><a href="./privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="./index.html">Home</a></p>
+  <p style="margin-top:6px;">
+    <a href="./privacy-policy.html">Privacy Policy</a>
+    &nbsp;·&nbsp;
+    <a href="./index.html">Home</a>
+  </p>
 </footer>
 
 </body>
