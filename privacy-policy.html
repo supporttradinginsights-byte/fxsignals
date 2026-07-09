@@ -200,7 +200,7 @@ footer .copy { margin-top: 8px; font-size: 0.8rem; color: #6b7280; }
   <h1>Trading Insights</h1>
   <div class="sub">Privacy Policy</div>
   <div class="badge-row">
-    <span class="badge">Last Updated: June 2026</span>
+    <span class="badge">Last Updated: July 2026</span>
     <span class="badge">Google Play Compliant</span>
     <span class="badge">Effective Immediately</span>
   </div>
@@ -222,8 +222,9 @@ footer .copy { margin-top: 8px; font-size: 0.8rem; color: #6b7280; }
     </ol>
     <div class="dc-note">
       ✅ <strong>All personal data will be permanently deleted within 30 days.</strong>
-      This includes your account profile, profile photo, signal view history, EA license
-      records, device registrations, and all preferences. This action is irreversible.
+      This includes your account profile, WhatsApp number, profile photo, signal view
+      history, EA license records, device registrations, and all preferences. This action
+      is irreversible.
     </div>
     <p class="dc-alt">
       📧 <strong>Alternative:</strong> Email
@@ -247,6 +248,7 @@ footer .copy { margin-top: 8px; font-size: 0.8rem; color: #6b7280; }
         <div class="ct">✅ Data We Do Collect</div>
         <ul>
           <li>Account registration info</li>
+          <li>WhatsApp number (for verification &amp; fraud prevention)</li>
           <li>Profile photo (optional)</li>
           <li>Device ID (for licensing)</li>
           <li>IP address (for security &amp; fraud prevention)</li>
@@ -293,8 +295,23 @@ footer .copy { margin-top: 8px; font-size: 0.8rem; color: #6b7280; }
       <li><strong>Email address</strong> — used for login, notifications, and support</li>
       <li><strong>Password</strong> — stored as an encrypted hash via Firebase Authentication;
           we never store or see your plain-text password</li>
+      <li><strong>WhatsApp number</strong> — collected during registration to verify your
+          identity and help prevent fake or duplicate account creation. This number may
+          also be used in a future update to send you a One-Time Password (OTP) for
+          account verification</li>
       <li><strong>Profile information</strong> you optionally provide during onboarding</li>
     </ul>
+
+    <div class="ibox info">
+      <strong>📌 WhatsApp Number &amp; Future OTP Verification:</strong>
+      We currently collect your WhatsApp number at sign-up solely to verify that you are
+      a genuine user and to prevent fake or duplicate account creation. We do not
+      currently send OTP messages to this number. In a future app update, we may begin
+      using it to deliver a One-Time Password (OTP) for account verification — if we do,
+      we will update this Privacy Policy and notify you in-app beforehand. We do not use
+      your WhatsApp number for marketing or promotional messages, and it is never sold or
+      shared with third parties for advertising purposes.
+    </div>
 
     <h3>1.2 — Device &amp; Licensing Data</h3>
     <ul>
@@ -399,7 +416,11 @@ footer .copy { margin-top: 8px; font-size: 0.8rem; color: #6b7280; }
       </tr>
       <tr>
         <td>Fraud &amp; duplicate-account prevention</td>
-        <td>IP address, device ID</td>
+        <td>IP address, device ID, WhatsApp number</td>
+      </tr>
+      <tr>
+        <td>Account verification via OTP (planned future feature)</td>
+        <td>WhatsApp number</td>
       </tr>
       <tr>
         <td>Providing signal subscription service</td>
@@ -523,6 +544,7 @@ footer .copy { margin-top: 8px; font-size: 0.8rem; color: #6b7280; }
     <table>
       <tr><th>Data Type</th><th>Retention Period</th></tr>
       <tr><td>Account profile &amp; login data</td><td>While account is active</td></tr>
+      <tr><td>WhatsApp number</td><td>While account is active; permanently deleted upon account deletion</td></tr>
       <tr><td>Profile photo</td><td>While account is active; permanently deleted upon account deletion</td></tr>
       <tr><td>Signal view history</td><td>Up to 12 months (for analytics)</td></tr>
       <tr><td>EA license &amp; download records</td><td>Duration of subscription + 6 months</td></tr>
