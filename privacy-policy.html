@@ -250,6 +250,7 @@ footer .copy { margin-top: 8px; font-size: 0.8rem; color: #6b7280; }
           <li>Account registration info</li>
           <li>WhatsApp number (for verification &amp; fraud prevention)</li>
           <li>Profile photo (optional)</li>
+          <li>Country &amp; city (for regional usage analytics)</li>
           <li>Device ID (for licensing)</li>
           <li>IP address (for security &amp; fraud prevention)</li>
           <li>Subscription &amp; payment status</li>
@@ -377,6 +378,38 @@ footer .copy { margin-top: 8px; font-size: 0.8rem; color: #6b7280; }
       for any other purpose, and adding a profile photo is entirely optional.
     </div>
 
+    <h3>1.8 — Country &amp; City (Regional Usage Data)</h3>
+    <ul>
+      <li><strong>Country</strong> — determined automatically from the international
+          dial code of the WhatsApp number you provide at sign-up (e.g. a number
+          starting with +92 is recorded as Pakistan). This is not derived from GPS,
+          IP address, or any other device location data</li>
+      <li><strong>City</strong> — a fully optional field you may choose to fill in
+          yourself from <strong>Profile → Edit Profile</strong>; it stays blank unless
+          you type something in</li>
+      <li>We use this information only in <strong>aggregate</strong> — for example,
+          seeing which countries and cities our overall user base is concentrated in —
+          to make informed decisions about where to focus our own marketing and
+          advertising campaigns</li>
+      <li>This data is <strong>never</strong> sold or shared with advertisers, ad
+          networks, or any other third party, and is never used to individually track
+          or target you with ads (see <strong>"What We Do NOT Do"</strong> in the
+          next section)</li>
+      <li>Visible only to our internal team for business analytics — never shown
+          publicly to other users of the app</li>
+      <li>You can update or clear your city at any time from <strong>Profile → Edit
+          Profile</strong>, or request full deletion of this data via the
+          <a href="#delete" style="color:#1a73e8">Account Deletion</a> section above</li>
+    </ul>
+    <div class="ibox info">
+      <strong>📌 Why We Collect This:</strong>
+      Knowing which countries and cities our users are concentrated in helps us decide
+      where to run advertising to grow the app — for example, prioritizing a city where
+      we already see strong organic usage. This is a business decision based on
+      <strong>aggregated, non-identifying statistics</strong> — it is not a way of
+      profiling, tracking, or individually targeting any single user with ads.
+    </div>
+
     <div class="ibox info">
       <strong>📌 What the EA Does NOT Send to Us:</strong>
       The Expert Advisor (EA) software, when running on your device, connects outbound
@@ -413,6 +446,10 @@ footer .copy { margin-top: 8px; font-size: 0.8rem; color: #6b7280; }
       <tr>
         <td>Profile personalization</td>
         <td>Profile photo (uploaded photo or preset avatar selection)</td>
+      </tr>
+      <tr>
+        <td>Understanding regional app usage to guide our own marketing/advertising decisions</td>
+        <td>Country, city (used only in aggregate)</td>
       </tr>
       <tr>
         <td>Fraud &amp; duplicate-account prevention</td>
@@ -453,16 +490,25 @@ footer .copy { margin-top: 8px; font-size: 0.8rem; color: #6b7280; }
     </table>
     </div>
 
-    <h3 style="margin-top:16px;">What We Do NOT Do with Your Data</h3>
+    <h3 style="margin-top:16px;" id="what-we-dont-do">What We Do NOT Do with Your Data</h3>
     <ul class="cross">
       <li>Sell your personal data to any third party</li>
-      <li>Use your data for advertising or retargeting</li>
+      <li>Use your personal data to individually target or retarget you with ads,
+          or share it with ad networks or data brokers</li>
       <li>Share your data with financial regulators or authorities
           (except as required by a lawful court order specifically addressed to Trading Insights)</li>
       <li>Use your data to make unsolicited financial recommendations</li>
       <li>Profile your trading behavior (we do not collect trading data)</li>
       <li>Share your data with your broker or any other financial institution</li>
     </ul>
+    <div class="ibox info" style="margin-top:12px;">
+      <strong>📌 Note on Country/City Data:</strong>
+      The only marketing-related use of your data is described in
+      <strong>Section 1.8</strong> above: we look at <strong>aggregated, non-identifying</strong>
+      country and city statistics to decide which regions to run our own advertising in.
+      This never involves showing you personally-targeted ads, retargeting you across
+      other apps or websites, or sharing your individual data with any ad network.
+    </div>
   </div>
 
   <!-- 3. THIRD-PARTY SERVICES -->
@@ -546,6 +592,7 @@ footer .copy { margin-top: 8px; font-size: 0.8rem; color: #6b7280; }
       <tr><td>Account profile &amp; login data</td><td>While account is active</td></tr>
       <tr><td>WhatsApp number</td><td>While account is active; permanently deleted upon account deletion</td></tr>
       <tr><td>Profile photo</td><td>While account is active; permanently deleted upon account deletion</td></tr>
+      <tr><td>Country &amp; city</td><td>While account is active; permanently deleted upon account deletion</td></tr>
       <tr><td>Signal view history</td><td>Up to 12 months (for analytics)</td></tr>
       <tr><td>EA license &amp; download records</td><td>Duration of subscription + 6 months</td></tr>
       <tr><td>Subscription &amp; payment records</td><td>7 years (legal/accounting compliance)</td></tr>
