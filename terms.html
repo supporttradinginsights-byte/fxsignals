@@ -175,7 +175,7 @@ a { color: var(--accent2); }
     <span class="app-name">Trading Insights</span>
   </div>
   <div class="page-title">Terms &amp; Conditions</div>
-  <div class="last-updated">Last Updated: June 2026</div>
+  <div class="last-updated">Last Updated: August 2026</div>
   <div class="badge-row">
     <span class="badge">Effective Immediately</span>
     <span class="badge">Google Play Compliant</span>
@@ -342,9 +342,9 @@ a { color: var(--accent2); }
   <h3 class="sub">5.2 — What Trading Insights Does NOT Do via the EA</h3>
   <ul class="list">
     <li>We do <strong style="color:var(--heading)">NOT</strong> have access to your
-        broker account, login credentials, or account balance at any time</li>
+        broker login credentials, password, or investor password at any time</li>
     <li>We do <strong style="color:var(--heading)">NOT</strong> monitor, view, or
-        record your individual trades or positions</li>
+        record your individual trades or open positions</li>
     <li>We do <strong style="color:var(--heading)">NOT</strong> control the EA's
         behavior once it is deployed on your system — all behavior is governed by
         your own settings</li>
@@ -359,12 +359,31 @@ a { color: var(--accent2); }
   <div class="box info">
     <strong>📌 Technical Clarification:</strong>
     The EA connects outbound to Trading Insights servers to receive signal data (read-only
-    data pull). This connection is one-directional for data only — Trading Insights receives
-    nothing from your trading environment. Your broker credentials, account data, positions,
-    and funds are never transmitted to or accessible by Trading Insights at any point.
+    data pull). Separately, <strong>only if you turn on the optional "Live Balance" feature</strong>,
+    the EA also sends a read-only account snapshot — account number/name, balance, equity,
+    floating and realized profit/loss, commission, swap, and deposit/withdrawal totals — so
+    it can be displayed back to you inside the app. This is opt-in and used solely to show
+    you your own account status; nothing is sent unless you enable this feature. Your broker
+    login credentials, password, individual trade history, open positions, and funds are
+    never transmitted to or accessible by Trading Insights at any point.
   </div>
 
-  <h3 class="sub">5.3 — Your Full Responsibility as EA Operator</h3>
+  <h3 class="sub">5.3 — Optional Live Balance Display Feature</h3>
+  <p>The EA includes an optional feature that, when enabled by you, sends a read-only
+  snapshot of your account's balance, equity, and profit/loss to our servers so it can be
+  shown to you inside the app's EA section — this lets you monitor how the EA is performing
+  on your account without needing to open MetaTrader separately.</p>
+  <ul class="list">
+    <li>This feature is <strong style="color:var(--heading)">off unless you connect an account</strong>
+        — no account data is sent to us otherwise</li>
+    <li>Only account number/name and balance-related figures are sent — never your password,
+        investor password, or individual trade-by-trade history</li>
+    <li>This data is used solely to display your own account status back to you and is not
+        used for any other purpose, sold, or shared with third parties</li>
+    <li>You may disconnect/unlink your account at any time, after which no further data is sent</li>
+  </ul>
+
+  <h3 class="sub">5.4 — Your Full Responsibility as EA Operator</h3>
   <p>By deploying the EA, you expressly acknowledge and accept that:</p>
   <ul class="list">
     <li>You are the sole operator of the EA — you decide to install it, run it, and configure it</li>
@@ -381,12 +400,12 @@ a { color: var(--accent2); }
         in your jurisdiction</li>
   </ul>
 
-  <h3 class="sub">5.4 — Risk Management Is Your Obligation</h3>
+  <h3 class="sub">5.5 — Risk Management Is Your Obligation</h3>
   <p>Automated trading via the EA carries significant and potentially amplified financial risks.
   You must set appropriate risk management parameters before activating the EA. Trading Insights
   strongly recommends never risking more than you can afford to lose on any automated system.</p>
 
-  <h3 class="sub">5.5 — Software License Terms</h3>
+  <h3 class="sub">5.6 — Software License Terms</h3>
   <ul class="list">
     <li>The EA is licensed to you personally for individual use only for the duration of your active subscription</li>
     <li>The license is non-exclusive, non-transferable, and non-sublicensable</li>
