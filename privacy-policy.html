@@ -200,7 +200,7 @@ footer .copy { margin-top: 8px; font-size: 0.8rem; color: #6b7280; }
   <h1>Trading Insights</h1>
   <div class="sub">Privacy Policy</div>
   <div class="badge-row">
-    <span class="badge">Last Updated: July 2026</span>
+    <span class="badge">Last Updated: August 2026</span>
     <span class="badge">Google Play Compliant</span>
     <span class="badge">Effective Immediately</span>
   </div>
@@ -259,18 +259,18 @@ footer .copy { margin-top: 8px; font-size: 0.8rem; color: #6b7280; }
           <li>Push notification tokens</li>
           <li>App usage analytics</li>
           <li>Support chat messages</li>
+          <li>Live MT5 account balance/equity snapshot — <strong>only</strong> if you
+              connect the EA to your account (see Section 1.9)</li>
         </ul>
       </div>
       <div class="pn-col no">
         <div class="ct">✗ Data We NEVER Collect</div>
         <ul>
-          <li>Your broker account credentials</li>
-          <li>Your broker account balance</li>
-          <li>Your individual trade details</li>
-          <li>Your trading profits or losses</li>
+          <li>Your broker account password or investor password</li>
+          <li>Your individual trade-by-trade history (entry/exit price, symbol, etc.)</li>
+          <li>Your open position details</li>
           <li>Your bank or card numbers</li>
-          <li>Any data from your MT4/MT5</li>
-          <li>Any data transmitted by the EA</li>
+          <li>Any MT4/MT5 data, unless you choose to connect the EA to your account</li>
         </ul>
       </div>
     </div>
@@ -411,21 +411,51 @@ footer .copy { margin-top: 8px; font-size: 0.8rem; color: #6b7280; }
     </div>
 
     <div class="ibox info">
-      <strong>📌 What the EA Does NOT Send to Us:</strong>
+      <strong>📌 Signal Data Flow:</strong>
       The Expert Advisor (EA) software, when running on your device, connects outbound
-      to our API solely to <em>receive</em> signal data. The EA does
-      <strong>not transmit</strong> your broker credentials, account balance, trade history,
-      open positions, profit/loss data, or any other information from your trading environment
-      back to Trading Insights. We have zero visibility into your broker account at any time.
+      to our API to <em>receive</em> signal data and, only if you choose to connect an
+      account (see Section 1.9 below), to send back a live account snapshot for display
+      inside the app. The EA never transmits your broker password/investor password.
       <div class="flow" style="margin-top:12px;">
         <span class="flow-step">Trading Insights<br/>Signal API</span>
-        <span class="flow-arrow">→ Data OUT →</span>
+        <span class="flow-arrow">→ Signals OUT →</span>
         <span class="flow-step">EA on<br/>Your Device</span>
         <span class="flow-arrow">→ Orders →</span>
         <span class="flow-step">Your Broker<br/>Account</span>
-        <span class="flow-arrow">↛</span>
-        <span class="flow-block" style="font-size:11px;">No data flows<br/>back to us</span>
       </div>
+      <div class="flow" style="margin-top:6px;">
+        <span class="flow-block" style="font-size:11px;">Only if you connect an account:</span>
+        <span class="flow-step">Your MT5<br/>Account State</span>
+        <span class="flow-arrow">→ Balance/Equity snapshot →</span>
+        <span class="flow-step">Trading Insights<br/>Servers</span>
+        <span class="flow-arrow">→ Displayed to →</span>
+        <span class="flow-step">You,<br/>in the App</span>
+      </div>
+    </div>
+
+    <h3>1.9 — Trading Account Data (Optional — Live Balance Feature via EA)</h3>
+    <p>If you choose to connect your MT5 account to the EA and use the optional
+    <strong>"Live Balance"</strong> feature in the EA section of the app, your EA sends the
+    following read-only account snapshot to our servers so we can display it back to you
+    inside the app, purely for your own convenience and monitoring:</p>
+    <ul>
+      <li>MT5 account number and account name</li>
+      <li>Live balance, equity, and floating profit/loss</li>
+      <li>Commission, swap, and total deposit/withdrawal totals</li>
+      <li>Realized profit history (15 days, 1 month, 2 months, all-time)</li>
+      <li>Connection status and last sync (heartbeat) time</li>
+    </ul>
+    <div class="ibox info">
+      <strong>📌 This Feature Is Entirely Opt-In:</strong>
+      This data is only sent if you install the EA on your own MT5 terminal and it is
+      actively connected/attached to an account — nothing is sent otherwise. We use this
+      snapshot <strong>solely</strong> to show you your own account's live balance, equity,
+      and profit/loss inside the app, so you can monitor how the EA is performing on your
+      account without opening MetaTrader separately. We do <strong>not</strong> use it for
+      any other purpose, we do <strong>not</strong> share it with any third party, and we
+      <strong>never</strong> receive your MT5 password or investor password — the EA only
+      reads the account statistics that MT5 itself exposes locally, and only your account
+      number/name plus these balance figures are transmitted.
     </div>
   </div>
 
@@ -487,6 +517,11 @@ footer .copy { margin-top: 8px; font-size: 0.8rem; color: #6b7280; }
         <td>Legal compliance obligations</td>
         <td>Account data, transaction records (as legally required)</td>
       </tr>
+      <tr>
+        <td>Displaying your live MT5 account balance/equity in-app (optional, EA feature)</td>
+        <td>Account number, balance, equity, profit, commission, swap, deposit/withdrawal
+            totals, realized P&amp;L — only if you connect an account</td>
+      </tr>
     </table>
     </div>
 
@@ -498,7 +533,10 @@ footer .copy { margin-top: 8px; font-size: 0.8rem; color: #6b7280; }
       <li>Share your data with financial regulators or authorities
           (except as required by a lawful court order specifically addressed to Trading Insights)</li>
       <li>Use your data to make unsolicited financial recommendations</li>
-      <li>Profile your trading behavior (we do not collect trading data)</li>
+      <li>Analyze, profile, or use your live balance/equity snapshot (Section 1.9) for
+          anything other than displaying it back to you in the app</li>
+      <li>Collect your MT5 password, investor password, or individual trade-by-trade
+          history</li>
       <li>Share your data with your broker or any other financial institution</li>
     </ul>
     <div class="ibox info" style="margin-top:12px;">
@@ -597,6 +635,9 @@ footer .copy { margin-top: 8px; font-size: 0.8rem; color: #6b7280; }
       <tr><td>EA license &amp; download records</td><td>Duration of subscription + 6 months</td></tr>
       <tr><td>Subscription &amp; payment records</td><td>7 years (legal/accounting compliance)</td></tr>
       <tr><td>Device &amp; session logs</td><td>Up to 90 days</td></tr>
+      <tr><td>Live MT5 account balance/equity snapshot (optional EA feature)</td>
+          <td>Updated continuously while the EA is connected; permanently deleted when you
+              disconnect/unlink the account or delete your account</td></tr>
       <tr><td>Support communications</td><td>2 years after resolution</td></tr>
       <tr>
         <td><strong>All data after account deletion</strong></td>
