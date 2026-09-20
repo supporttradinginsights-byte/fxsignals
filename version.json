@@ -1,6 +1,6 @@
 {
   "version": "1.0.23",
-  "min_version": "1.0.24",
+  "min_version": "1.0.22",
   "build_number": 76,
   "force_update": false,
   "message": "New update available on Play Store.",
