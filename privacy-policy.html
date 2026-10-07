@@ -200,7 +200,7 @@ footer .copy { margin-top: 8px; font-size: 0.8rem; color: #6b7280; }
   <h1>Trading Insights</h1>
   <div class="sub">Privacy Policy</div>
   <div class="badge-row">
-    <span class="badge">Last Updated: August 2026</span>
+    <span class="badge">Last Updated: October 2026</span>
     <span class="badge">Google Play Compliant</span>
     <span class="badge">Effective Immediately</span>
   </div>
@@ -225,6 +225,12 @@ footer .copy { margin-top: 8px; font-size: 0.8rem; color: #6b7280; }
       This includes your account profile, WhatsApp number, profile photo, signal view
       history, EA license records, device registrations, and all preferences. This action
       is irreversible.
+      <br/><br/>
+      <strong>Limited exceptions:</strong> we must keep certain records the law requires
+      (for example payment/transaction records, see Section 5), and we may keep a minimal
+      anti-abuse record for accounts removed for spam or serious abuse, as explained under
+      <a href="#moderation" style="color:#1b5e20;font-weight:700">Spam Prevention &amp;
+      Account Moderation</a>.
     </div>
     <p class="dc-alt">
       📧 <strong>Alternative:</strong> Email
@@ -258,7 +264,11 @@ footer .copy { margin-top: 8px; font-size: 0.8rem; color: #6b7280; }
           <li>EA license &amp; download records</li>
           <li>Push notification tokens</li>
           <li>App usage analytics</li>
+          <li>Basic diagnostics (app version, device model/OS, notification on/off status)</li>
+          <li>Account &amp; sign-in activity (for security and spam detection)</li>
           <li>Support chat messages</li>
+          <li>Community chat messages — <strong>only after</strong> that feature launches
+              (see Community Chat section)</li>
           <li>Live MT5 account balance/equity snapshot — <strong>only</strong> if you
               connect the EA to your account (see Section 1.9)</li>
         </ul>
@@ -320,6 +330,12 @@ footer .copy { margin-top: 8px; font-size: 0.8rem; color: #6b7280; }
       <li><strong>Unique device identifier</strong> — for subscription license enforcement
           (to prevent account sharing)</li>
       <li><strong>App version</strong> — for update management and bug tracking</li>
+      <li><strong>Notification permission status</strong> (on/off) — so our support team
+          can help you if you are not receiving alerts</li>
+      <li><strong>Sign-in and account activity</strong> (for example, when and from which
+          device an account was used) — for account security and to detect spam, fake or
+          duplicate accounts. See <a href="#moderation" style="color:#1a73e8">Spam
+          Prevention &amp; Account Moderation</a></li>
       <li><strong>IP address</strong> — collected automatically when you register or use
           our services, used for account security, fraud/duplicate-account detection,
           and to comply with legal obligations</li>
@@ -350,6 +366,8 @@ footer .copy { margin-top: 8px; font-size: 0.8rem; color: #6b7280; }
     <h3>1.6 — Support Data</h3>
     <ul>
       <li>Messages and attachments you send through in-app live chat or email support</li>
+      <li>Messages you post in the community chat, once that feature is available — see
+          <a href="#community-chat" style="color:#1a73e8">Community Chat</a></li>
     </ul>
 
     <h3>1.7 — Profile Photo (Optional)</h3>
@@ -364,9 +382,14 @@ footer .copy { margin-top: 8px; font-size: 0.8rem; color: #6b7280; }
           with, or stored by, any third party or advertiser</li>
       <li>Built-in illustrated avatars are drawn entirely within the app itself;
           choosing one does not upload or transmit any photo or image at all</li>
-      <li>Your profile photo is visible only to you, and to our support team if you
-          contact support (so we can identify your account) — it is <strong>never</strong>
-          shown publicly to other users of the app</li>
+      <li>Today, your profile photo is visible only to you and to our support/admin team
+          (so we can identify your account) — it is <strong>not</strong> shown to other
+          users of the app</li>
+      <li>If we launch the community chat feature, your display name and your profile
+          photo or avatar (if you have set one) may be shown to other members <strong>inside
+          that chat only</strong>. See
+          <a href="#community-chat" style="color:#1a73e8">Community Chat</a>. We will tell
+          you in-app before this starts</li>
       <li>You can change or permanently remove your profile photo at any time from
           <strong>Profile → Edit Profile</strong></li>
     </ul>
@@ -396,7 +419,7 @@ footer .copy { margin-top: 8px; font-size: 0.8rem; color: #6b7280; }
           or target you with ads (see <strong>"What We Do NOT Do"</strong> in the
           next section)</li>
       <li>Visible only to our internal team for business analytics — never shown
-          publicly to other users of the app</li>
+          publicly to other users of the app, including in the community chat</li>
       <li>You can update or clear your city at any time from <strong>Profile → Edit
           Profile</strong>, or request full deletion of this data via the
           <a href="#delete" style="color:#1a73e8">Account Deletion</a> section above</li>
@@ -486,6 +509,11 @@ footer .copy { margin-top: 8px; font-size: 0.8rem; color: #6b7280; }
         <td>IP address, device ID, WhatsApp number</td>
       </tr>
       <tr>
+        <td>Spam, fake-account and abuse detection; account moderation</td>
+        <td>IP address, device ID, device model/OS, WhatsApp number, sign-in/account
+            activity, user reports</td>
+      </tr>
+      <tr>
         <td>Account verification via OTP (planned future feature)</td>
         <td>WhatsApp number</td>
       </tr>
@@ -506,8 +534,12 @@ footer .copy { margin-top: 8px; font-size: 0.8rem; color: #6b7280; }
         <td>FCM token, notification preferences</td>
       </tr>
       <tr>
-        <td>Customer support</td>
-        <td>Name, email, support messages</td>
+        <td>Customer support &amp; troubleshooting (e.g. missing notifications)</td>
+        <td>Name, email, support messages, app version, device model/OS, notification status</td>
+      </tr>
+      <tr>
+        <td>Community chat (planned future feature)</td>
+        <td>Display name, profile photo/avatar, messages you post, user reports</td>
       </tr>
       <tr>
         <td>App improvement &amp; bug fixing</td>
@@ -538,6 +570,10 @@ footer .copy { margin-top: 8px; font-size: 0.8rem; color: #6b7280; }
       <li>Collect your MT5 password, investor password, or individual trade-by-trade
           history</li>
       <li>Share your data with your broker or any other financial institution</li>
+      <li>Show your email address, WhatsApp number, country/city, subscription or
+          payment details to other users of the app</li>
+      <li>Use spam-prevention or moderation data for marketing, advertising, or to
+          analyse your trading</li>
     </ul>
     <div class="ibox info" style="margin-top:12px;">
       <strong>📌 Note on Country/City Data:</strong>
@@ -546,6 +582,88 @@ footer .copy { margin-top: 8px; font-size: 0.8rem; color: #6b7280; }
       country and city statistics to decide which regions to run our own advertising in.
       This never involves showing you personally-targeted ads, retargeting you across
       other apps or websites, or sharing your individual data with any ad network.
+    </div>
+  </div>
+
+  <!-- 2A. SPAM PREVENTION & ACCOUNT MODERATION -->
+  <div class="card" id="moderation">
+    <h2 class="orange">🧹 Spam Prevention &amp; Account Moderation</h2>
+    <p>We want Trading Insights to stay a clean and trustworthy place for genuine users.
+    To do that, we use a limited set of account and device information to detect and act
+    on spam, fake accounts, duplicate accounts, and abusive behaviour.</p>
+
+    <h3>What we look at</h3>
+    <ul>
+      <li>WhatsApp number, device identifier, device model/OS and IP address — to spot fake,
+          duplicate, or repeat sign-ups</li>
+      <li>Sign-in and account activity (for example, when and from which device an account
+          was used)</li>
+      <li>Reports submitted by other users, and the details of any moderation action taken</li>
+    </ul>
+
+    <h3>Who can see it, and what can happen</h3>
+    <ul>
+      <li>Administrative and moderation tools are available only to authorized Trading
+          Insights staff, and only to keep the service safe and to support users</li>
+      <li>If an account is found to be spam, fake, or in breach of our Terms, we may warn,
+          restrict, suspend, or permanently remove it</li>
+    </ul>
+
+    <h3>What we keep after an account is removed</h3>
+    <p>If an account is removed for spam, fraud, or serious abuse — or if a person deletes
+    their account after being flagged — we may keep a minimal anti-abuse record (such as the
+    device identifier, WhatsApp number or account identifier, the reason, and the date) for
+    up to <strong>24 months</strong>, so the same person cannot immediately return and repeat
+    the behaviour. This record is kept for security and fraud-prevention purposes only.
+    Apart from records we are legally required to keep (such as payment records), it is the
+    only personal data we retain after account deletion.</p>
+
+    <div class="ibox orange">
+      <strong>📌 Purpose Limitation:</strong>
+      This information is used only for security, spam prevention, and keeping the community
+      safe. It is never used for marketing or advertising, never sold, and never used to
+      profile or analyse your trading.
+    </div>
+  </div>
+
+  <!-- 2B. COMMUNITY CHAT (UPCOMING) -->
+  <div class="card" id="community-chat">
+    <h2 class="purple">💬 Community Chat (Upcoming Feature)</h2>
+    <div class="ibox purple">
+      <strong>📌 Not yet available:</strong>
+      We plan to add a community chat where registered members can talk to each other and
+      share ideas. This section explains how data will be handled once it launches. We will
+      notify you in-app before it is switched on.
+    </div>
+
+    <h3>What other members will be able to see</h3>
+    <ul class="check">
+      <li>Your display name</li>
+      <li>Your profile photo or avatar, if you have set one</li>
+      <li>The messages you post in the chat</li>
+    </ul>
+
+    <h3>What is never shown to other members</h3>
+    <ul class="cross">
+      <li>Your email address and WhatsApp number</li>
+      <li>Your country and city</li>
+      <li>Your subscription, payment, device, or EA/MT5 account information</li>
+    </ul>
+
+    <h3>How chat data is handled</h3>
+    <ul>
+      <li>Messages are stored on our own servers and are not used for advertising or sold</li>
+      <li>Authorized moderators may review reported or flagged messages and remove them</li>
+      <li>In-app tools to report a message or user, and to block a user, will be provided</li>
+      <li>When you delete your account, your chat messages are deleted or anonymised as part
+          of the 30-day deletion process (see Section 5 for retention)</li>
+    </ul>
+
+    <div class="ibox warn">
+      <strong>⚠️ Think before you post:</strong>
+      Anything you write in the community chat can be read, copied, or screenshotted by other
+      members, and we cannot control what they do with it. Never share phone numbers, email
+      addresses, passwords, broker details, or account numbers in the chat.
     </div>
   </div>
 
@@ -587,6 +705,11 @@ footer .copy { margin-top: 8px; font-size: 0.8rem; color: #6b7280; }
         <td>Customer support communication</td>
         <td>This Privacy Policy</td>
       </tr>
+      <tr>
+        <td><strong>Community Chat (upcoming, own servers)</strong></td>
+        <td>Member-to-member chat and moderation</td>
+        <td>This Privacy Policy</td>
+      </tr>
     </table>
     </div>
 
@@ -611,6 +734,8 @@ footer .copy { margin-top: 8px; font-size: 0.8rem; color: #6b7280; }
       <li><strong>API authentication</strong> requires signed JWT Bearer tokens for all requests</li>
       <li><strong>Device registration</strong> limits unauthorized account access</li>
       <li><strong>Server access</strong> is restricted to authorized personnel only</li>
+      <li><strong>Administrative and moderation tools</strong> are available only to
+          authorized staff</li>
     </ul>
     <div class="ibox warn">
       <strong>⚠️ No system is completely immune to security risks.</strong>
@@ -639,9 +764,16 @@ footer .copy { margin-top: 8px; font-size: 0.8rem; color: #6b7280; }
           <td>Updated continuously while the EA is connected; permanently deleted when you
               disconnect/unlink the account or delete your account</td></tr>
       <tr><td>Support communications</td><td>2 years after resolution</td></tr>
+      <tr><td>Community chat messages (when available)</td>
+          <td>Up to 12 months, or until deleted by you or a moderator; deleted or anonymised
+              when you delete your account</td></tr>
+      <tr><td>Anti-abuse record for accounts removed for spam/abuse</td>
+          <td>Up to 24 months (minimal identifiers, reason, date) — see
+              <a href="#moderation" style="color:#1a73e8">Spam Prevention</a></td></tr>
       <tr>
-        <td><strong>All data after account deletion</strong></td>
-        <td><strong>Permanently removed within 30 days</strong></td>
+        <td><strong>All other data after account deletion</strong></td>
+        <td><strong>Permanently removed within 30 days</strong>, except records we must keep
+            by law (e.g. payment records, above) and the anti-abuse record described above</td>
       </tr>
     </table>
     </div>
@@ -797,6 +929,9 @@ footer .copy { margin-top: 8px; font-size: 0.8rem; color: #6b7280; }
           features and services — no misleading claims about investment returns</li>
       <li><strong>Children's Policy:</strong> The app is rated for users 18+ only
           and contains no content marketed to minors</li>
+      <li><strong>User-Generated Content:</strong> Before the community chat is enabled, we
+          will provide in-app tools to report content and block users, and active moderation,
+          as Google Play requires for apps with user-generated content</li>
     </ul>
     <div class="ibox green" style="margin-top:14px;">
       <strong>📌 No Guaranteed Returns:</strong>
